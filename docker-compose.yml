@@ -1,0 +1,40 @@
+services:
+  app:
+    build: .
+    volumes:
+      - ./data:/data:ro
+      - ./output:/output
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      INVOICE_OLLAMA_URL: ${INVOICE_OLLAMA_URL:-http://ollama:11434}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    user: "${UID:-1000}:${GID:-1000}"
+
+  ollama:
+    profiles:
+      - ollama
+    image: ollama/ollama
+    volumes:
+      - ollama-models:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  ollama-pull:
+    profiles:
+      - ollama
+    image: ollama/ollama
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    entrypoint: ["ollama", "pull", "${INVOICE_OLLAMA_MODEL:-qwen2.5vl:7b}"]
+    depends_on:
+      ollama:
+        condition: service_healthy
+
+volumes:
+  ollama-models:

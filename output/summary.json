@@ -1,0 +1,21 @@
+{
+  "extractor": "rules",
+  "documentsProcessed": 13,
+  "fieldsRequiringHumanReview": 240,
+  "invoicesRequiringHumanReview": 13,
+  "documents": [
+    "digital_01.pdf",
+    "digital_02.pdf",
+    "digital_03_multipage.pdf",
+    "handwritten_02_patricia_gapay.pdf",
+    "handwritten_03_filling_station.pdf",
+    "handwritten_04_charismalico.pdf",
+    "handwritten_06_laureen_uy.pdf",
+    "multilingual_01_hongkong.pdf",
+    "multilingual_02_vietnam.pdf",
+    "multilingual_03_singapore.pdf",
+    "scanned_01.pdf",
+    "scanned_02.pdf",
+    "scanned_03_mj_wines.pdf"
+  ]
+}

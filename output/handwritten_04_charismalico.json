@@ -1,0 +1,88 @@
+{
+  "documentId": "handwritten_04_charismalico.pdf",
+  "invoice": {
+    "invoiceNumber": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "FIELD_MISSING"
+      ]
+    },
+    "invoiceDate": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "FIELD_MISSING"
+      ]
+    },
+    "supplierName": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "FIELD_MISSING"
+      ]
+    },
+    "supplierAddress": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "buyerName": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "FIELD_MISSING"
+      ]
+    },
+    "buyerAddress": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "currency": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "FIELD_MISSING"
+      ]
+    },
+    "subtotalAmount": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "taxAmount": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "totalAmount": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "FIELD_MISSING"
+      ]
+    },
+    "paymentTerms": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    }
+  },
+  "lineItems": [],
+  "isHumanReviewRequired": true,
+  "reviewReasons": [
+    "FIELD_MISSING"
+  ]
+}

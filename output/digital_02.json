@@ -1,0 +1,405 @@
+{
+  "documentId": "digital_02.pdf",
+  "invoice": {
+    "invoiceNumber": {
+      "value": "RSCT0008",
+      "bbox": {
+        "x1": 1426,
+        "y1": 475,
+        "x2": 1547,
+        "y2": 505,
+        "page": 1
+      },
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "LOW_CONFIDENCE"
+      ]
+    },
+    "invoiceDate": {
+      "value": "25/02/26",
+      "bbox": {
+        "x1": 1371,
+        "y1": 294,
+        "x2": 1476,
+        "y2": 324,
+        "page": 1
+      },
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "supplierName": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "FIELD_MISSING"
+      ]
+    },
+    "supplierAddress": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "buyerName": {
+      "value": "BANK PAYMENT",
+      "bbox": {
+        "x1": 837,
+        "y1": 643,
+        "x2": 950,
+        "y2": 707,
+        "page": 1
+      },
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "LOW_CONFIDENCE"
+      ]
+    },
+    "buyerAddress": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "currency": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "FIELD_MISSING"
+      ]
+    },
+    "subtotalAmount": {
+      "value": "400.00",
+      "bbox": {
+        "x1": 1491,
+        "y1": 1448,
+        "x2": 1568,
+        "y2": 1477,
+        "page": 1
+      },
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "AMOUNT_INCONSISTENT"
+      ]
+    },
+    "taxAmount": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "totalAmount": {
+      "value": "Venue/ rental charges 1 400.00 400.00",
+      "bbox": {
+        "x1": 208,
+        "y1": 1281,
+        "x2": 1568,
+        "y2": 1313,
+        "page": 1
+      },
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "paymentTerms": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    }
+  },
+  "lineItems": [
+    {
+      "description": {
+        "value": "Venue/ rental charges",
+        "bbox": {
+          "x1": 208,
+          "y1": 1281,
+          "x2": 479,
+          "y2": 1313,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE"
+        ]
+      },
+      "quantity": {
+        "value": "1",
+        "bbox": {
+          "x1": 909,
+          "y1": 1281,
+          "x2": 925,
+          "y2": 1313,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE"
+        ]
+      },
+      "unitPrice": {
+        "value": "400.00",
+        "bbox": {
+          "x1": 1116,
+          "y1": 1281,
+          "x2": 1202,
+          "y2": 1313,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE"
+        ]
+      },
+      "lineAmount": {
+        "value": "400.00",
+        "bbox": {
+          "x1": 1483,
+          "y1": 1281,
+          "x2": 1568,
+          "y2": 1313,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE"
+        ]
+      },
+      "itemCode": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "unitOfMeasure": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      }
+    },
+    {
+      "description": {
+        "value": "SUBTOTAL",
+        "bbox": {
+          "x1": 1092,
+          "y1": 1450,
+          "x2": 1202,
+          "y2": 1476,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE"
+        ]
+      },
+      "quantity": {
+        "value": "400.00",
+        "bbox": {
+          "x1": 1491,
+          "y1": 1448,
+          "x2": 1568,
+          "y2": 1477,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE"
+        ]
+      },
+      "unitPrice": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "lineAmount": {
+        "value": "400.00",
+        "bbox": {
+          "x1": 1491,
+          "y1": 1448,
+          "x2": 1568,
+          "y2": 1477,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE"
+        ]
+      },
+      "itemCode": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "unitOfMeasure": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      }
+    },
+    {
+      "description": {
+        "value": "Remarks",
+        "bbox": {
+          "x1": 208,
+          "y1": 1465,
+          "x2": 317,
+          "y2": 1498,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE"
+        ]
+      },
+      "quantity": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "unitPrice": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "lineAmount": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "itemCode": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "unitOfMeasure": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      }
+    },
+    {
+      "description": {
+        "value": "MYR",
+        "bbox": {
+          "x1": 1353,
+          "y1": 1862,
+          "x2": 1436,
+          "y2": 1908,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE"
+        ]
+      },
+      "quantity": {
+        "value": "400.00",
+        "bbox": {
+          "x1": 1445,
+          "y1": 1862,
+          "x2": 1568,
+          "y2": 1908,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE"
+        ]
+      },
+      "unitPrice": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "lineAmount": {
+        "value": "400.00",
+        "bbox": {
+          "x1": 1445,
+          "y1": 1862,
+          "x2": 1568,
+          "y2": 1908,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE"
+        ]
+      },
+      "itemCode": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "unitOfMeasure": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      }
+    },
+    {
+      "description": {
+        "value": "Quote",
+        "bbox": {
+          "x1": 1029,
+          "y1": 1866,
+          "x2": 1119,
+          "y2": 1905,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE"
+        ]
+      },
+      "quantity": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "unitPrice": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "lineAmount": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "itemCode": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "unitOfMeasure": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      }
+    }
+  ],
+  "isHumanReviewRequired": true,
+  "reviewReasons": [
+    "AMOUNT_INCONSISTENT",
+    "FIELD_MISSING",
+    "LOW_CONFIDENCE"
+  ]
+}
