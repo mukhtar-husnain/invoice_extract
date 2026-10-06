@@ -1,5 +1,3 @@
-"""Review flags, format validation, and arithmetic consistency checks."""
-
 from __future__ import annotations
 
 from typing import Iterable
@@ -79,7 +77,6 @@ SHARED_TOKEN_PAIRS_ALLOWED = frozenset({frozenset({"totalAmount", "amountDue"})}
 
 
 def check_shared_boxes(doc: InvoiceDocument) -> None:
-    """Two header fields read from the exact same box means at least one of them is the wrong field."""
     by_box: dict[tuple, list[str]] = {}
     for name, field in doc.iter_header_fields():
         if field.bbox is not None:

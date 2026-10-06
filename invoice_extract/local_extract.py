@@ -1,5 +1,3 @@
-"""Label and pattern-based field extraction (rules backend)."""
-
 from __future__ import annotations
 
 import re
@@ -106,7 +104,6 @@ class RulesExtractor:
         return header, line_items
 
     def _demote_tax_id_outside_buyer_block(self, header: dict[str, RawFieldExtraction], tokens: list[Token]) -> None:
-        """A bare 'TIN' label above the buyer block is usually the seller's registration, not the buyer's."""
         tax_id, buyer = header["buyerTaxId"], header["buyerName"]
         if tax_id.value is None:
             return
@@ -146,7 +143,6 @@ class RulesExtractor:
         return False
 
     def _find_label(self, name: str, line: list[Token], start: int) -> list[Token] | None:
-        """Smallest chunk starting at start whose text is a label for name, so values are never part of the label."""
         patterns = LABEL_PATTERNS[name]
         exclude = EXCLUDE_PATTERNS.get(name)
         for size in range(1, 5):
@@ -164,7 +160,6 @@ class RulesExtractor:
         return None
 
     def _extend_label_gloss(self, chunk: list[Token], line: list[Token], start: int) -> list[Token]:
-        """Include a translated gloss such as 'So (Invoice No.):' so the value starts after the colon."""
         if chunk[-1].text.endswith(":"):
             return chunk
         following = line[start + len(chunk) : start + len(chunk) + 3]
@@ -196,7 +191,6 @@ class RulesExtractor:
         return RawFieldExtraction(value=None, token_ids=[], confidence=None)
 
     def _name_continuation(self, value_tokens: list[Token], tokens: list[Token]) -> list[Token]:
-        """Second line of a company name that wraps, e.g. 'JADE E-SERVICES' / 'SINGAPORE PTD LTD'."""
         if LEGAL_SUFFIX_END_RE.search(_fold(" ".join(t.text for t in value_tokens))):
             return []
         left = min(t.x for t in value_tokens)
@@ -221,7 +215,6 @@ class RulesExtractor:
         return []
 
     def _value_after(self, label: list[Token], tokens: list[Token]) -> list[Token]:
-        """Words to the right of the label that overlap it vertically, up to the first column gap."""
         top = min(t.y for t in label)
         bottom = max(t.y + t.height for t in label)
         right = label[-1].x + label[-1].width
@@ -258,7 +251,6 @@ class RulesExtractor:
         return group
 
     def _value_below(self, label: list[Token], tokens: list[Token]) -> list[Token]:
-        """First row of words under the label, starting near the label's left edge, without a leading sub-label."""
         left = label[0].x
         bottom = max(t.y + t.height for t in label)
         height = max(t.height for t in label)
@@ -415,7 +407,6 @@ class RulesExtractor:
 
     @staticmethod
     def _column_for(token: Token, columns: dict[str, tuple[int, int]]) -> str:
-        """Column whose header overlaps the word most; nearest header edge when nothing overlaps."""
         x1, x2 = token.x, token.x + token.width
 
         def score(span: tuple[int, int]) -> tuple[float, float]:
@@ -492,7 +483,6 @@ class RulesExtractor:
     def _continues_description(
         self, line: list[Token], last_desc: list[Token], last_bottom: float, columns: dict
     ) -> bool:
-        """A wrapped description: next line, same left edge, nothing in any other column."""
         height = max(t.height for t in last_desc)
         if line[0].y - last_bottom > height * 0.8:
             return False

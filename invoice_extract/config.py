@@ -1,5 +1,3 @@
-"""Shared thresholds and environment-driven settings."""
-
 from __future__ import annotations
 
 import os
@@ -38,7 +36,6 @@ class PipelineConfig:
 
 
 def env_or(name: str, default):
-    """Environment value, treating unset and blank (as copied from .env.example) the same."""
     value = os.environ.get(name, "").strip()
     return value if value else default
 

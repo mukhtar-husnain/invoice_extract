@@ -1,5 +1,3 @@
-"""End-to-end invoice extraction orchestration."""
-
 from __future__ import annotations
 
 import json

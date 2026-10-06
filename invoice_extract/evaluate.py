@@ -1,8 +1,3 @@
-"""Score pipeline output against a hand-checked answer key and compute the missed-review rate.
-
-Missed-review rate = extracted values that are wrong and not flagged for review / all extracted values.
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -153,7 +148,6 @@ def _row_similarity(pred_row: dict[str, Any], gold_row: dict[str, Any]) -> float
 
 
 def match_line_items(pred_rows: list[dict[str, Any]], gold_rows: list[dict[str, Any]]) -> list[tuple[int | None, int | None]]:
-    """Greedy one-to-one matching of predicted rows to answer-key rows by description and amount."""
     candidates = sorted(
         ((_row_similarity(p, g), pi, gi) for pi, p in enumerate(pred_rows) for gi, g in enumerate(gold_rows)),
         reverse=True,

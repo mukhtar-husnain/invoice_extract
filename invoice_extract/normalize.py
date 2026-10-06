@@ -1,5 +1,3 @@
-"""Parse printed amounts, dates, rates, and currencies into comparable values."""
-
 from __future__ import annotations
 
 import re

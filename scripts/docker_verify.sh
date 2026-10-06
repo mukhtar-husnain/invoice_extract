@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-# Build the image, run the tests, extract every PDF in ./data with OCR, then score against eval/gold.json.
-# Usage: scripts/docker_verify.sh [extractor]   (default: rules)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 

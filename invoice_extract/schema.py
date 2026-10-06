@@ -1,5 +1,3 @@
-"""Pydantic models for invoice fields, line items, and documents."""
-
 from __future__ import annotations
 
 from typing import Any

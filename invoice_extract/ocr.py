@@ -1,5 +1,3 @@
-"""Tesseract OCR fallback for pages with sparse native text."""
-
 from __future__ import annotations
 
 import sys

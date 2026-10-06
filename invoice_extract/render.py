@@ -1,5 +1,3 @@
-"""Rasterize PDF pages and extract native text-layer word boxes."""
-
 from __future__ import annotations
 
 from dataclasses import dataclass, field

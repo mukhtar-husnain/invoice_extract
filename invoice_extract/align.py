@@ -1,5 +1,3 @@
-"""Align extracted values to cited token boxes."""
-
 from __future__ import annotations
 
 import re

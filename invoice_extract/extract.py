@@ -1,5 +1,3 @@
-"""Shared extraction prompt and Ollama / external vision API clients."""
-
 from __future__ import annotations
 
 import base64
@@ -75,7 +73,6 @@ EXTRACTION_JSON_SCHEMA = {
 
 
 def build_token_catalog(tokens: list[Token]) -> str:
-    """One line per word: id|page|x,y|text. Compact so dense pages fit the context window."""
     return "\n".join(f"{t.id}|{t.page}|{t.x},{t.y}|{t.text}" for t in tokens)
 
 

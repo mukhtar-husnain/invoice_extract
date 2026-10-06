@@ -1,5 +1,3 @@
-"""Command-line entry point for the invoice extraction pipeline."""
-
 from __future__ import annotations
 
 import argparse
