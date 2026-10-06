@@ -1,0 +1,2011 @@
+{
+  "definition": "missedReviewRatePct = incorrect values not flagged for review / all extracted (non-null) values",
+  "overall": {
+    "extractedValues": 161,
+    "correctValues": 129,
+    "incorrectValues": 32,
+    "incorrectFlagged": 31,
+    "incorrectNotFlagged": 1,
+    "correctButFlagged": 21,
+    "expectedValues": 305,
+    "missingValues": 150,
+    "missingFlagged": 21,
+    "missedReviewRatePct": 0.62,
+    "precisionPct": 80.12,
+    "recallPct": 42.3,
+    "correctValuesWithBboxPct": 100.0
+  },
+  "byField": {
+    "amountDue": {
+      "extractedValues": 2,
+      "correctValues": 2,
+      "incorrectValues": 0,
+      "incorrectFlagged": 0,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 2,
+      "missingValues": 0,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 100.0,
+      "recallPct": 100.0,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "buyerName": {
+      "extractedValues": 9,
+      "correctValues": 5,
+      "incorrectValues": 4,
+      "incorrectFlagged": 4,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 13,
+      "missingValues": 4,
+      "missingFlagged": 4,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 55.56,
+      "recallPct": 38.46,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "buyerTaxId": {
+      "extractedValues": 3,
+      "correctValues": 0,
+      "incorrectValues": 3,
+      "incorrectFlagged": 3,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 4,
+      "missingValues": 1,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 0.0,
+      "recallPct": 0.0,
+      "correctValuesWithBboxPct": null
+    },
+    "currency": {
+      "extractedValues": 7,
+      "correctValues": 7,
+      "incorrectValues": 0,
+      "incorrectFlagged": 0,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 7,
+      "expectedValues": 10,
+      "missingValues": 3,
+      "missingFlagged": 3,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 100.0,
+      "recallPct": 70.0,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "dueDate": {
+      "extractedValues": 2,
+      "correctValues": 2,
+      "incorrectValues": 0,
+      "incorrectFlagged": 0,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 2,
+      "missingValues": 0,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 100.0,
+      "recallPct": 100.0,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "invoiceDate": {
+      "extractedValues": 9,
+      "correctValues": 7,
+      "incorrectValues": 2,
+      "incorrectFlagged": 2,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 13,
+      "missingValues": 4,
+      "missingFlagged": 4,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 77.78,
+      "recallPct": 53.85,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "invoiceNumber": {
+      "extractedValues": 8,
+      "correctValues": 5,
+      "incorrectValues": 3,
+      "incorrectFlagged": 3,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 13,
+      "missingValues": 5,
+      "missingFlagged": 5,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 62.5,
+      "recallPct": 38.46,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "lineItem.description": {
+      "extractedValues": 24,
+      "correctValues": 20,
+      "incorrectValues": 4,
+      "incorrectFlagged": 3,
+      "incorrectNotFlagged": 1,
+      "correctButFlagged": 1,
+      "expectedValues": 51,
+      "missingValues": 30,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 4.17,
+      "precisionPct": 83.33,
+      "recallPct": 39.22,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "lineItem.lineAmount": {
+      "extractedValues": 24,
+      "correctValues": 21,
+      "incorrectValues": 3,
+      "incorrectFlagged": 3,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 3,
+      "expectedValues": 50,
+      "missingValues": 29,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 87.5,
+      "recallPct": 42.0,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "lineItem.quantity": {
+      "extractedValues": 17,
+      "correctValues": 16,
+      "incorrectValues": 1,
+      "incorrectFlagged": 1,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 49,
+      "missingValues": 32,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 94.12,
+      "recallPct": 32.65,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "lineItem.taxAmount": {
+      "extractedValues": 0,
+      "correctValues": 0,
+      "incorrectValues": 0,
+      "incorrectFlagged": 0,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 0,
+      "missingValues": 0,
+      "missingFlagged": 0,
+      "missedReviewRatePct": null,
+      "precisionPct": null,
+      "recallPct": null,
+      "correctValuesWithBboxPct": null
+    },
+    "lineItem.taxRate": {
+      "extractedValues": 0,
+      "correctValues": 0,
+      "incorrectValues": 0,
+      "incorrectFlagged": 0,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 0,
+      "missingValues": 0,
+      "missingFlagged": 0,
+      "missedReviewRatePct": null,
+      "precisionPct": null,
+      "recallPct": null,
+      "correctValuesWithBboxPct": null
+    },
+    "lineItem.unitPrice": {
+      "extractedValues": 19,
+      "correctValues": 19,
+      "incorrectValues": 0,
+      "incorrectFlagged": 0,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 1,
+      "expectedValues": 40,
+      "missingValues": 21,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 100.0,
+      "recallPct": 47.5,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "paymentTerms": {
+      "extractedValues": 3,
+      "correctValues": 3,
+      "incorrectValues": 0,
+      "incorrectFlagged": 0,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 5,
+      "missingValues": 2,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 100.0,
+      "recallPct": 60.0,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "purchaseOrderNumber": {
+      "extractedValues": 6,
+      "correctValues": 5,
+      "incorrectValues": 1,
+      "incorrectFlagged": 1,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 7,
+      "missingValues": 1,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 83.33,
+      "recallPct": 71.43,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "supplierAddress": {
+      "extractedValues": 1,
+      "correctValues": 1,
+      "incorrectValues": 0,
+      "incorrectFlagged": 0,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 11,
+      "missingValues": 10,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 100.0,
+      "recallPct": 9.09,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "supplierName": {
+      "extractedValues": 13,
+      "correctValues": 5,
+      "incorrectValues": 8,
+      "incorrectFlagged": 8,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 5,
+      "expectedValues": 13,
+      "missingValues": 0,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 38.46,
+      "recallPct": 38.46,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "taxAmount": {
+      "extractedValues": 6,
+      "correctValues": 3,
+      "incorrectValues": 3,
+      "incorrectFlagged": 3,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 9,
+      "missingValues": 3,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 50.0,
+      "recallPct": 33.33,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "totalAmount": {
+      "extractedValues": 8,
+      "correctValues": 8,
+      "incorrectValues": 0,
+      "incorrectFlagged": 0,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 4,
+      "expectedValues": 13,
+      "missingValues": 5,
+      "missingFlagged": 5,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 100.0,
+      "recallPct": 61.54,
+      "correctValuesWithBboxPct": 100.0
+    }
+  },
+  "byDocument": {
+    "digital_01.pdf": {
+      "extractedValues": 14,
+      "correctValues": 14,
+      "incorrectValues": 0,
+      "incorrectFlagged": 0,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 2,
+      "expectedValues": 14,
+      "missingValues": 0,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 100.0,
+      "recallPct": 100.0,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "digital_02.pdf": {
+      "extractedValues": 11,
+      "correctValues": 10,
+      "incorrectValues": 1,
+      "incorrectFlagged": 1,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 1,
+      "expectedValues": 12,
+      "missingValues": 1,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 90.91,
+      "recallPct": 83.33,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "digital_03_multipage.pdf": {
+      "extractedValues": 11,
+      "correctValues": 10,
+      "incorrectValues": 1,
+      "incorrectFlagged": 1,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 2,
+      "expectedValues": 12,
+      "missingValues": 1,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 90.91,
+      "recallPct": 83.33,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "handwritten_02_patricia_gapay.pdf": {
+      "extractedValues": 2,
+      "correctValues": 0,
+      "incorrectValues": 2,
+      "incorrectFlagged": 2,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 8,
+      "missingValues": 6,
+      "missingFlagged": 4,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 0.0,
+      "recallPct": 0.0,
+      "correctValuesWithBboxPct": null
+    },
+    "handwritten_03_filling_station.pdf": {
+      "extractedValues": 4,
+      "correctValues": 0,
+      "incorrectValues": 4,
+      "incorrectFlagged": 4,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 29,
+      "missingValues": 25,
+      "missingFlagged": 3,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 0.0,
+      "recallPct": 0.0,
+      "correctValuesWithBboxPct": null
+    },
+    "handwritten_04_charismalico.pdf": {
+      "extractedValues": 5,
+      "correctValues": 1,
+      "incorrectValues": 4,
+      "incorrectFlagged": 4,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 1,
+      "expectedValues": 11,
+      "missingValues": 6,
+      "missingFlagged": 2,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 20.0,
+      "recallPct": 9.09,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "handwritten_06_laureen_uy.pdf": {
+      "extractedValues": 4,
+      "correctValues": 1,
+      "incorrectValues": 3,
+      "incorrectFlagged": 3,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 1,
+      "expectedValues": 9,
+      "missingValues": 5,
+      "missingFlagged": 3,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 25.0,
+      "recallPct": 11.11,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "multilingual_01_hongkong.pdf": {
+      "extractedValues": 60,
+      "correctValues": 59,
+      "incorrectValues": 1,
+      "incorrectFlagged": 1,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 1,
+      "expectedValues": 64,
+      "missingValues": 4,
+      "missingFlagged": 1,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 98.33,
+      "recallPct": 92.19,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "multilingual_02_vietnam.pdf": {
+      "extractedValues": 11,
+      "correctValues": 11,
+      "incorrectValues": 0,
+      "incorrectFlagged": 0,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 1,
+      "expectedValues": 11,
+      "missingValues": 0,
+      "missingFlagged": 0,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 100.0,
+      "recallPct": 100.0,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "multilingual_03_singapore.pdf": {
+      "extractedValues": 7,
+      "correctValues": 6,
+      "incorrectValues": 1,
+      "incorrectFlagged": 1,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 2,
+      "expectedValues": 53,
+      "missingValues": 46,
+      "missingFlagged": 1,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 85.71,
+      "recallPct": 11.32,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "scanned_01.pdf": {
+      "extractedValues": 12,
+      "correctValues": 2,
+      "incorrectValues": 10,
+      "incorrectFlagged": 10,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 2,
+      "expectedValues": 33,
+      "missingValues": 27,
+      "missingFlagged": 1,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 16.67,
+      "recallPct": 6.06,
+      "correctValuesWithBboxPct": 100.0
+    },
+    "scanned_02.pdf": {
+      "extractedValues": 2,
+      "correctValues": 0,
+      "incorrectValues": 2,
+      "incorrectFlagged": 2,
+      "incorrectNotFlagged": 0,
+      "correctButFlagged": 0,
+      "expectedValues": 22,
+      "missingValues": 20,
+      "missingFlagged": 4,
+      "missedReviewRatePct": 0.0,
+      "precisionPct": 0.0,
+      "recallPct": 0.0,
+      "correctValuesWithBboxPct": null
+    },
+    "scanned_03_mj_wines.pdf": {
+      "extractedValues": 18,
+      "correctValues": 15,
+      "incorrectValues": 3,
+      "incorrectFlagged": 2,
+      "incorrectNotFlagged": 1,
+      "correctButFlagged": 8,
+      "expectedValues": 27,
+      "missingValues": 9,
+      "missingFlagged": 2,
+      "missedReviewRatePct": 5.56,
+      "precisionPct": 83.33,
+      "recallPct": 55.56,
+      "correctValuesWithBboxPct": 100.0
+    }
+  },
+  "errors": [
+    {
+      "document": "digital_02.pdf",
+      "field": "supplierName",
+      "predicted": "Sdn Bhd Account No : 6034821750",
+      "expected": "Tan Wei Ling",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "digital_02.pdf",
+      "field": "supplierAddress",
+      "predicted": null,
+      "expected": "12, Jalan Damai 5, Taman Damai 43000 Kajang Selangor",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "digital_03_multipage.pdf",
+      "field": "supplierName",
+      "predicted": "88 SIN MING ROAD, #04-05 JADE E-SERVICES",
+      "expected": "HAUS OF NOVA",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "digital_03_multipage.pdf",
+      "field": "supplierAddress",
+      "predicted": null,
+      "expected": "88 SIN MING ROAD, #04-05 SIN MING INDUSTRIAL BUILDING SINGAPORE 573972",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_02_patricia_gapay.pdf",
+      "field": "invoiceNumber",
+      "predicted": null,
+      "expected": "0043",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_02_patricia_gapay.pdf",
+      "field": "invoiceDate",
+      "predicted": "November 23, 20",
+      "expected": "November 23, 2025",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_02_patricia_gapay.pdf",
+      "field": "supplierName",
+      "predicted": "RECEIVED from_®X )W€_€ SORVICEL INES. INC:",
+      "expected": "MARILOU S. REYES",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_02_patricia_gapay.pdf",
+      "field": "supplierAddress",
+      "predicted": null,
+      "expected": "22 M. Santos Street Signal Village Western Bicutan 1632 Taguig City NCR Fourth District Philippines",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_02_patricia_gapay.pdf",
+      "field": "buyerName",
+      "predicted": null,
+      "expected": "BF JADE E SERVICES PHILIPPINES INC.",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_02_patricia_gapay.pdf",
+      "field": "buyerTaxId",
+      "predicted": null,
+      "expected": "008-183-175",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_02_patricia_gapay.pdf",
+      "field": "currency",
+      "predicted": null,
+      "expected": [
+        "P",
+        "PHP",
+        "pesos"
+      ],
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_02_patricia_gapay.pdf",
+      "field": "totalAmount",
+      "predicted": null,
+      "expected": [
+        "15,789.47",
+        "15,000"
+      ],
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "invoiceNumber",
+      "predicted": null,
+      "expected": "29769",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "invoiceDate",
+      "predicted": null,
+      "expected": "Nov 7 2025",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "supplierName",
+      "predicted": "| Owned & Operated By Marisol-ventura Corp.",
+      "expected": [
+        "AMBER LANE BAR-CAFÉ",
+        "Marisol-Ventura Corp."
+      ],
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "supplierAddress",
+      "predicted": null,
+      "expected": "3087 J. Nakpil St. Poblacion 1207 City of Makati NCR Fourth District Philippines",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "buyerName",
+      "predicted": "PF JEDE E SERVICES Pints tuc",
+      "expected": "BF JADE E SERVICES PHILS INC",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "buyerTaxId",
+      "predicted": "\\2",
+      "expected": "008-183-175-000",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "taxAmount",
+      "predicted": "41",
+      "expected": "523.71",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "totalAmount",
+      "predicted": null,
+      "expected": "5324.43",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "CALI BACON PIZZA",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "628",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "T-BIRD",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "2",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "1596",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "PLAIN RICE",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "9",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "405",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "LASAGNA",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "2",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "1196",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "NACHOS",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "595",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "ONION RINGS",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "248",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "CAKE FOR ALL SEASON",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_03_filling_station.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "220",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_04_charismalico.pdf",
+      "field": "invoiceNumber",
+      "predicted": "i16",
+      "expected": "0116",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_04_charismalico.pdf",
+      "field": "invoiceDate",
+      "predicted": null,
+      "expected": "OCTOBER 07, 2025",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_04_charismalico.pdf",
+      "field": "supplierAddress",
+      "predicted": null,
+      "expected": "7 Kalayaan St. Vista Verde Subd. San Roque (Pob.) Antipolo City Rizal",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_04_charismalico.pdf",
+      "field": "buyerName",
+      "predicted": "BF JAOE E- €E£v",
+      "expected": "BF JADE E-SERVICES PHILIPPINES INC.",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_04_charismalico.pdf",
+      "field": "buyerTaxId",
+      "predicted": "103-137 0†, 204$",
+      "expected": "008-183-175",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_04_charismalico.pdf",
+      "field": "taxAmount",
+      "predicted": "000-00",
+      "expected": "24,000.00",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_04_charismalico.pdf",
+      "field": "totalAmount",
+      "predicted": null,
+      "expected": [
+        "204,000.00",
+        "224,000.00"
+      ],
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_04_charismalico.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "PD — ZALORA 10.10 & 11.11",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_04_charismalico.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_04_charismalico.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "204,000.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_06_laureen_uy.pdf",
+      "field": "invoiceNumber",
+      "predicted": "82",
+      "expected": "0174",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_06_laureen_uy.pdf",
+      "field": "invoiceDate",
+      "predicted": null,
+      "expected": "MARCH 05 2026",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_06_laureen_uy.pdf",
+      "field": "supplierAddress",
+      "predicted": null,
+      "expected": "No. 82 Mother Ignacia Street, Laging Handa, 1103 Quezon City 00002 NCR, Second District, Philippines",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_06_laureen_uy.pdf",
+      "field": "buyerName",
+      "predicted": "ĐÈ 3T",
+      "expected": "BF JADE E-SERVICES PHILIPPINES INC.",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_06_laureen_uy.pdf",
+      "field": "buyerTaxId",
+      "predicted": "615-734-218-00000",
+      "expected": "008-183-175",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_06_laureen_uy.pdf",
+      "field": "currency",
+      "predicted": null,
+      "expected": [
+        "P",
+        "PHP",
+        "pesos"
+      ],
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "handwritten_06_laureen_uy.pdf",
+      "field": "taxAmount",
+      "predicted": null,
+      "expected": "18,352.94",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "handwritten_06_laureen_uy.pdf",
+      "field": "totalAmount",
+      "predicted": null,
+      "expected": [
+        "171,294.12",
+        "148,352.94"
+      ],
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "multilingual_01_hongkong.pdf",
+      "field": "supplierName",
+      "predicted": "ZALORA (HONG KONG) LIMITED",
+      "expected": "NEXTRA (HONG KONG) COMPANY LTD.",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "multilingual_01_hongkong.pdf",
+      "field": "supplierAddress",
+      "predicted": null,
+      "expected": "22nd Floor, 15 Wang Chiu Road, Kowloon Bay, Kowloon HONG KONG",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_01_hongkong.pdf",
+      "field": "buyerName",
+      "predicted": null,
+      "expected": "ZALORA (HONG KONG) LIMITED",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "multilingual_01_hongkong.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "PK6 COCA-COLA MINI CAN 200ML",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_01_hongkong.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "invoiceNumber",
+      "predicted": null,
+      "expected": "537685",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "supplierName",
+      "predicted": "Evergreen Fresh Produce Pte Ltd TAX INVOICE",
+      "expected": "Evergreen Fresh Produce Pte Ltd",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "supplierAddress",
+      "predicted": null,
+      "expected": "42 Sungei Kadut Loop, #03-05 Kadut Logistics Hub Singapore 729665",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Carrot 红萝卜",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1.20",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "1.40",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "1.68",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Grape Red 红葡萄",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "0.50",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "6.50",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "3.25",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Honeydew 蜜瓜",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "11.20",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "2.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "22.40",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Pineapple Honey 蜜黄梨",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "10.30",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "1.70",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "17.51",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Strawberry 草莓 250G",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "4.30",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "4.30",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Watermelon 西瓜",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "18.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "1.25",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "22.50",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Lettuce Iceberg 生菜粒",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1.20",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "3.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "3.60",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Mesclun Salad (Triple Washed) 沙拉",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "16.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "16.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Romaine Lettuce 罗马生菜",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "3.50",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "3.50",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Onion White Peeled 去皮白大葱 1kg",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "2.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "1.60",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "3.20",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Cabbage 包菜",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "2.90",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "1.20",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "multilingual_03_singapore.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "3.48",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "invoiceNumber",
+      "predicted": null,
+      "expected": "0628329753",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "invoiceDate",
+      "predicted": "oad 08.09.2025",
+      "expected": "03.09.2025",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "supplierName",
+      "predicted": "C O LA Pte. Ltd. Customer peedback DOCUMENT NO. oad ~—",
+      "expected": [
+        "AURORA COLA Singapore Beverages Pte. Ltd.",
+        "Singapore Beverages Pte. Ltd.",
+        "AURORA BEVERAGES SINGAPORE PTE. LTD."
+      ],
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "buyerName",
+      "predicted": "505387672 OHBHESLO",
+      "expected": [
+        "MILLIONAIRES TASTE PTE. LTD.",
+        "MILLIONAIRES TASTE PTE. LTD. C/O REVERIE LIVE MUSIC BY BAR BAR Q"
+      ],
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "taxAmount",
+      "predicted": null,
+      "expected": "18.32",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "paymentTerms",
+      "predicted": null,
+      "expected": "30 day from billing day",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "purchaseOrderNumber",
+      "predicted": "_€KA2",
+      "expected": "0HBHE9L0",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[0].description",
+      "predicted": "a TAXES",
+      "expected": null,
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[0].lineAmount",
+      "predicted": "80",
+      "expected": null,
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[1].description",
+      "predicted": "\\ Pr . sinter Act",
+      "expected": null,
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[1].lineAmount",
+      "predicted": "20",
+      "expected": null,
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[2].description",
+      "predicted": "NAME § SIGN",
+      "expected": null,
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[2].lineAmount",
+      "predicted": "4",
+      "expected": null,
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "320MLALSCN1X24 Aura SCSG",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "6.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": [
+        "15.00",
+        "20.00"
+      ],
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "90.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "320MLALSCN1X24 Aura SCSG",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": [
+        "0.00",
+        "20.00"
+      ],
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "0.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "320MLALSCN1X12 Zeta Gin Ale-KO UTT",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "4.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": [
+        "9.50",
+        "20.00"
+      ],
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "38.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "320MLALSCN1X12 Zeta Tonic-KO UTT",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "4.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": [
+        "9.50",
+        "20.00"
+      ],
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "38.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "320MLALSCN1X12 Zeta Soda Wtr-KO UTT",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": [
+        "0.00",
+        "20.00"
+      ],
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "0.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "320MLALSCN1X12 AURA ZRO SGR UTCS",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "5.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": [
+        "7.50",
+        "20.00"
+      ],
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_01.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "37.50",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "invoiceNumber",
+      "predicted": "[INV25080553 7",
+      "expected": "INV25080553",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "invoiceDate",
+      "predicted": null,
+      "expected": "2/9/2025",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "supplierName",
+      "predicted": "Finefood Pte Ltd Document No. |: [INV25080553 —”",
+      "expected": "Meridian Finefood Pte Ltd",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "supplierAddress",
+      "predicted": null,
+      "expected": "88 Woodlands Industrial Park E7, #02-11 Woodlands East Hub, Singapore 757317",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "buyerName",
+      "predicted": null,
+      "expected": "Millionaires Taste Pte Ltd",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "currency",
+      "predicted": null,
+      "expected": [
+        "S$",
+        "SGD"
+      ],
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "taxAmount",
+      "predicted": null,
+      "expected": "39.15",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "totalAmount",
+      "predicted": null,
+      "expected": "474.15",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "paymentTerms",
+      "predicted": null,
+      "expected": "Net 30 days",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "purchaseOrderNumber",
+      "predicted": null,
+      "expected": "T-WRIODOJK",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Illy Coffee Bean CLASSIC Roast 3kg (Ctn x 2 Unit)",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "1",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "195.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "195.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Illy Coffee Bean DECAF (Blue) 250gm (Ctn x 12 Unit)",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "6",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "18.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "108.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Caotina Swiss PRONTO Chocolate Powder 1kg (Ctn x 6 Unit)",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "6",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "22.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_02.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "132.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_03_mj_wines.pdf",
+      "field": "invoiceNumber",
+      "predicted": null,
+      "expected": "INV5436SP",
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "scanned_03_mj_wines.pdf",
+      "field": "supplierAddress",
+      "predicted": null,
+      "expected": "88 Playfair Road, #06-03, Singapore, 367977",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_03_mj_wines.pdf",
+      "field": "buyerName",
+      "predicted": null,
+      "expected": [
+        "Millionaires Taste Pte. Ltd. (Reverie Live Music)",
+        "Millionaires Taste Pte. Ltd."
+      ],
+      "status": "missing",
+      "flagged": true
+    },
+    {
+      "document": "scanned_03_mj_wines.pdf",
+      "field": "taxAmount",
+      "predicted": "9%",
+      "expected": "S$ 51.48",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_03_mj_wines.pdf",
+      "field": "lineItems[0].quantity",
+      "predicted": "750m!",
+      "expected": "4 Btl",
+      "status": "incorrect_flagged",
+      "flagged": true
+    },
+    {
+      "document": "scanned_03_mj_wines.pdf",
+      "field": "lineItems[1].quantity",
+      "predicted": null,
+      "expected": "12 Btl",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_03_mj_wines.pdf",
+      "field": "lineItems[2].description",
+      "predicted": "Siterra Prosecco Spumante DOC",
+      "expected": "Silterra Prosecco Spumante DOC Extra Dry Sparkling Wine 750ml",
+      "status": "incorrect_not_flagged",
+      "flagged": false
+    },
+    {
+      "document": "scanned_03_mj_wines.pdf",
+      "field": "lineItems[2].quantity",
+      "predicted": null,
+      "expected": "4 Btl",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_03_mj_wines.pdf",
+      "field": "lineItems[missing].description",
+      "predicted": null,
+      "expected": "Flavabom Vine Dried Shiraz Red Wine 750ml",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_03_mj_wines.pdf",
+      "field": "lineItems[missing].quantity",
+      "predicted": null,
+      "expected": "4 Btl",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_03_mj_wines.pdf",
+      "field": "lineItems[missing].unitPrice",
+      "predicted": null,
+      "expected": "38.00",
+      "status": "missing",
+      "flagged": false
+    },
+    {
+      "document": "scanned_03_mj_wines.pdf",
+      "field": "lineItems[missing].lineAmount",
+      "predicted": null,
+      "expected": "S$ 152.00",
+      "status": "missing",
+      "flagged": false
+    }
+  ]
+}

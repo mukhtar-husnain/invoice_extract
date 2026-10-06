@@ -2,11 +2,17 @@
   "documentId": "handwritten_06_laureen_uy.pdf",
   "invoice": {
     "invoiceNumber": {
-      "value": null,
-      "bbox": null,
+      "value": "82",
+      "bbox": {
+        "x1": 4075,
+        "y1": 690,
+        "x2": 4179,
+        "y2": 762,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "INVALID_FORMAT"
       ]
     },
     "invoiceDate": {
@@ -17,12 +23,24 @@
         "FIELD_MISSING"
       ]
     },
-    "supplierName": {
+    "dueDate": {
       "value": null,
       "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "supplierName": {
+      "value": "DEANNA RUTH F. MARASIGAN MARKETING SERVICES, OPC",
+      "bbox": {
+        "x1": 3440,
+        "y1": 486,
+        "x2": 7328,
+        "y2": 594,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE"
       ]
     },
     "supplierAddress": {
@@ -32,18 +50,32 @@
       "reviewReasons": []
     },
     "buyerName": {
-      "value": null,
-      "bbox": null,
+      "value": "\u0110\u00c8 3T",
+      "bbox": {
+        "x1": 3527,
+        "y1": 1766,
+        "x2": 4022,
+        "y2": 1882,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE"
       ]
     },
-    "buyerAddress": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
+    "buyerTaxId": {
+      "value": "615-734-218-00000",
+      "bbox": {
+        "x1": 4861,
+        "y1": 993,
+        "x2": 5585,
+        "y2": 1050,
+        "page": 1
+      },
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "LOW_CONFIDENCE"
+      ]
     },
     "currency": {
       "value": null,
@@ -52,12 +84,6 @@
       "reviewReasons": [
         "FIELD_MISSING"
       ]
-    },
-    "subtotalAmount": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
     },
     "taxAmount": {
       "value": null,
@@ -73,7 +99,19 @@
         "FIELD_MISSING"
       ]
     },
+    "amountDue": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
     "paymentTerms": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "purchaseOrderNumber": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
@@ -83,6 +121,8 @@
   "lineItems": [],
   "isHumanReviewRequired": true,
   "reviewReasons": [
-    "FIELD_MISSING"
+    "FIELD_MISSING",
+    "INVALID_FORMAT",
+    "LOW_CONFIDENCE"
   ]
 }

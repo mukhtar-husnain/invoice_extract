@@ -2,11 +2,17 @@
   "documentId": "scanned_02.pdf",
   "invoice": {
     "invoiceNumber": {
-      "value": null,
-      "bbox": null,
+      "value": "[INV25080553 7",
+      "bbox": {
+        "x1": 2300,
+        "y1": 274,
+        "x2": 2964,
+        "y2": 431,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE"
       ]
     },
     "invoiceDate": {
@@ -17,12 +23,25 @@
         "FIELD_MISSING"
       ]
     },
-    "supplierName": {
+    "dueDate": {
       "value": null,
       "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "supplierName": {
+      "value": "Finefood Pte Ltd Document No. |: [INV25080553 \u2014\u201d",
+      "bbox": {
+        "x1": 203,
+        "y1": 245,
+        "x2": 2964,
+        "y2": 373,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE",
+        "INVALID_FORMAT"
       ]
     },
     "supplierAddress": {
@@ -39,7 +58,7 @@
         "FIELD_MISSING"
       ]
     },
-    "buyerAddress": {
+    "buyerTaxId": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
@@ -52,12 +71,6 @@
       "reviewReasons": [
         "FIELD_MISSING"
       ]
-    },
-    "subtotalAmount": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
     },
     "taxAmount": {
       "value": null,
@@ -73,7 +86,19 @@
         "FIELD_MISSING"
       ]
     },
+    "amountDue": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
     "paymentTerms": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "purchaseOrderNumber": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
@@ -83,6 +108,8 @@
   "lineItems": [],
   "isHumanReviewRequired": true,
   "reviewReasons": [
-    "FIELD_MISSING"
+    "FIELD_MISSING",
+    "INVALID_FORMAT",
+    "LOW_CONFIDENCE"
   ]
 }

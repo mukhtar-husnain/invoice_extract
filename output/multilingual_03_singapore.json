@@ -10,19 +10,41 @@
       ]
     },
     "invoiceDate": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": true,
-      "reviewReasons": [
-        "FIELD_MISSING"
-      ]
+      "value": "09/09/25",
+      "bbox": {
+        "x1": 2016,
+        "y1": 699,
+        "x2": 2237,
+        "y2": 747,
+        "page": 1
+      },
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "dueDate": {
+      "value": "15/10/25",
+      "bbox": {
+        "x1": 608,
+        "y1": 878,
+        "x2": 806,
+        "y2": 925,
+        "page": 1
+      },
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
     },
     "supplierName": {
-      "value": null,
-      "bbox": null,
+      "value": "Evergreen Fresh Produce Pte Ltd TAX INVOICE",
+      "bbox": {
+        "x1": 54,
+        "y1": 240,
+        "x2": 2975,
+        "y2": 317,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE"
       ]
     },
     "supplierAddress": {
@@ -32,48 +54,76 @@
       "reviewReasons": []
     },
     "buyerName": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": true,
-      "reviewReasons": [
-        "FIELD_MISSING"
-      ]
+      "value": "MILLIONAIRES TASTE PTE. LTD",
+      "bbox": {
+        "x1": 607,
+        "y1": 697,
+        "x2": 1354,
+        "y2": 745,
+        "page": 1
+      },
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
     },
-    "buyerAddress": {
+    "buyerTaxId": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
       "reviewReasons": []
     },
     "currency": {
-      "value": null,
-      "bbox": null,
+      "value": "SGD",
+      "bbox": {
+        "x1": 2341,
+        "y1": 2919,
+        "x2": 2445,
+        "y2": 2961,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE"
       ]
     },
-    "subtotalAmount": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
-    },
     "taxAmount": {
-      "value": null,
-      "bbox": null,
+      "value": "9.13",
+      "bbox": {
+        "x1": 2878,
+        "y1": 3005,
+        "x2": 2970,
+        "y2": 3047,
+        "page": 1
+      },
       "isHumanReviewRequired": false,
       "reviewReasons": []
     },
     "totalAmount": {
-      "value": null,
-      "bbox": null,
+      "value": "110.55",
+      "bbox": {
+        "x1": 2814,
+        "y1": 3149,
+        "x2": 2972,
+        "y2": 3190,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE"
       ]
     },
+    "amountDue": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
     "paymentTerms": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "purchaseOrderNumber": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
@@ -83,6 +133,7 @@
   "lineItems": [],
   "isHumanReviewRequired": true,
   "reviewReasons": [
-    "FIELD_MISSING"
+    "FIELD_MISSING",
+    "LOW_CONFIDENCE"
   ]
 }

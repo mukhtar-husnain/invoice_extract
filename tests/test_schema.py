@@ -39,13 +39,22 @@ def test_output_shape_matches_contract():
     assert set(payload["invoice"].keys()) == {
         "invoiceNumber",
         "invoiceDate",
+        "dueDate",
         "supplierName",
         "supplierAddress",
         "buyerName",
-        "buyerAddress",
+        "buyerTaxId",
         "currency",
-        "subtotalAmount",
         "taxAmount",
         "totalAmount",
+        "amountDue",
         "paymentTerms",
+        "purchaseOrderNumber",
     }
+    for field in payload["invoice"].values():
+        assert set(field.keys()) == {"value", "bbox", "isHumanReviewRequired", "reviewReasons"}
+
+
+def test_line_item_shape_matches_contract():
+    payload = LineItem().model_dump(mode="json")
+    assert set(payload.keys()) == {"description", "quantity", "unitPrice", "taxRate", "taxAmount", "lineAmount"}

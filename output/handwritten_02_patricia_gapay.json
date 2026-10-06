@@ -10,19 +10,38 @@
       ]
     },
     "invoiceDate": {
-      "value": null,
-      "bbox": null,
+      "value": "November 23, 20",
+      "bbox": {
+        "x1": 1244,
+        "y1": 988,
+        "x2": 1530,
+        "y2": 1037,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE"
       ]
     },
-    "supplierName": {
+    "dueDate": {
       "value": null,
       "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "supplierName": {
+      "value": "RECEIVED from_\u00aeX )W\u20ac_\u20ac SORVICEL INES. INC:",
+      "bbox": {
+        "x1": 557,
+        "y1": 1040,
+        "x2": 1349,
+        "y2": 1073,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE",
+        "INVALID_FORMAT"
       ]
     },
     "supplierAddress": {
@@ -39,7 +58,7 @@
         "FIELD_MISSING"
       ]
     },
-    "buyerAddress": {
+    "buyerTaxId": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
@@ -52,12 +71,6 @@
       "reviewReasons": [
         "FIELD_MISSING"
       ]
-    },
-    "subtotalAmount": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
     },
     "taxAmount": {
       "value": null,
@@ -73,7 +86,19 @@
         "FIELD_MISSING"
       ]
     },
+    "amountDue": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
     "paymentTerms": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "purchaseOrderNumber": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
@@ -83,6 +108,8 @@
   "lineItems": [],
   "isHumanReviewRequired": true,
   "reviewReasons": [
-    "FIELD_MISSING"
+    "FIELD_MISSING",
+    "INVALID_FORMAT",
+    "LOW_CONFIDENCE"
   ]
 }

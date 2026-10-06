@@ -1,0 +1,299 @@
+{
+  "_about": "Hand-checked answer key, read from the page images. A field is a string, null (not printed), or a list of acceptable answers (null in a list means leaving it empty is also correct). Line-item keys left out are null.",
+  "digital_01.pdf": {
+    "invoice": {
+      "invoiceNumber": "CSOS 202602-931",
+      "invoiceDate": "02ND FEB 2026",
+      "dueDate": null,
+      "supplierName": "CRESTLINE STAFFING AND OUTSOURCING SOLUTIONS SDN BHD",
+      "supplierAddress": ["Unit B-12-03, Menara Prestij, No 8, Jalan Kerinchi, 59200 Kuala Lumpur", null],
+      "buyerName": "Jade Eservices Malaysia Sdn. Bhd.",
+      "buyerTaxId": null,
+      "currency": "RM",
+      "taxAmount": "150.47",
+      "totalAmount": "13,764.48",
+      "amountDue": ["13,764.48", null],
+      "paymentTerms": "30 DAYS",
+      "purchaseOrderNumber": ["5200004937 - BPO 2026", "5200004937"]
+    },
+    "lineItems": [
+      {"description": "Cost of Labor 26th Jan 2026 to 25th Feb 2026", "lineAmount": "11,733.10"},
+      {"description": "Management and Processing Fee", "lineAmount": "1,880.91"}
+    ]
+  },
+  "digital_02.pdf": {
+    "invoice": {
+      "invoiceNumber": "RSCT0008",
+      "invoiceDate": "25/02/26",
+      "dueDate": null,
+      "supplierName": "Tan Wei Ling",
+      "supplierAddress": "12, Jalan Damai 5, Taman Damai 43000 Kajang Selangor",
+      "buyerName": ["Jade Eservices Malaysia Sdn Bhd", "Elin Chak"],
+      "buyerTaxId": null,
+      "currency": "MYR",
+      "taxAmount": null,
+      "totalAmount": "400.00",
+      "amountDue": ["400.00", null],
+      "paymentTerms": null,
+      "purchaseOrderNumber": "51000383499"
+    },
+    "lineItems": [
+      {"description": "Venue/ rental charges", "quantity": "1", "unitPrice": "400.00", "lineAmount": "400.00"}
+    ]
+  },
+  "digital_03_multipage.pdf": {
+    "invoice": {
+      "invoiceNumber": "0273",
+      "invoiceDate": "27 FEBRUARY 2026",
+      "dueDate": null,
+      "supplierName": "HAUS OF NOVA",
+      "supplierAddress": "88 SIN MING ROAD, #04-05 SIN MING INDUSTRIAL BUILDING SINGAPORE 573972",
+      "buyerName": "JADE E-SERVICES SINGAPORE PTD LTD",
+      "buyerTaxId": null,
+      "currency": "S$",
+      "taxAmount": null,
+      "totalAmount": "S$250",
+      "amountDue": ["S$250", null],
+      "paymentTerms": [null, "KINDLY MAKE PAYMENT USE INVOICE NUMBER AS REFERENCE NO"],
+      "purchaseOrderNumber": "5100038358"
+    },
+    "lineItems": [
+      {"description": "FULL DAY PACKAGE", "quantity": "1", "unitPrice": "S$250", "lineAmount": "S$250"}
+    ]
+  },
+  "handwritten_02_patricia_gapay.pdf": {
+    "invoice": {
+      "invoiceNumber": "0043",
+      "invoiceDate": "November 23, 2025",
+      "dueDate": null,
+      "supplierName": "MARILOU S. REYES",
+      "supplierAddress": "22 M. Santos Street Signal Village Western Bicutan 1632 Taguig City NCR Fourth District Philippines",
+      "buyerName": "BF JADE E SERVICES PHILIPPINES INC.",
+      "buyerTaxId": "008-183-175",
+      "currency": ["P", "PHP", "pesos"],
+      "taxAmount": ["789.47", null],
+      "totalAmount": ["15,789.47", "15,000"],
+      "amountDue": ["15,000", null],
+      "paymentTerms": null,
+      "purchaseOrderNumber": null
+    },
+    "lineItems": []
+  },
+  "handwritten_03_filling_station.pdf": {
+    "invoice": {
+      "invoiceNumber": "29769",
+      "invoiceDate": "Nov 7 2025",
+      "dueDate": null,
+      "supplierName": ["AMBER LANE BAR-CAFÉ", "Marisol-Ventura Corp."],
+      "supplierAddress": "3087 J. Nakpil St. Poblacion 1207 City of Makati NCR Fourth District Philippines",
+      "buyerName": "BF JADE E SERVICES PHILS INC",
+      "buyerTaxId": "008-183-175-000",
+      "currency": [null, "PHP"],
+      "taxAmount": "523.71",
+      "totalAmount": "5324.43",
+      "amountDue": ["5324.43", null],
+      "paymentTerms": null,
+      "purchaseOrderNumber": null
+    },
+    "lineItems": [
+      {"description": "CALI BACON PIZZA", "quantity": "1", "lineAmount": "628"},
+      {"description": "T-BIRD", "quantity": "2", "lineAmount": "1596"},
+      {"description": "PLAIN RICE", "quantity": "9", "lineAmount": "405"},
+      {"description": "LASAGNA", "quantity": "2", "lineAmount": "1196"},
+      {"description": "NACHOS", "quantity": "1", "lineAmount": "595"},
+      {"description": "ONION RINGS", "quantity": "1", "lineAmount": "248"},
+      {"description": "CAKE FOR ALL SEASON", "quantity": "1", "lineAmount": "220"}
+    ]
+  },
+  "handwritten_04_charismalico.pdf": {
+    "invoice": {
+      "invoiceNumber": "0116",
+      "invoiceDate": "OCTOBER 07, 2025",
+      "dueDate": null,
+      "supplierName": ["RENZ ADRIAN P. CORTEZ PHOTOGRAPHY SERVICES", "RENZ ADRIAN P. CORTEZ"],
+      "supplierAddress": "7 Kalayaan St. Vista Verde Subd. San Roque (Pob.) Antipolo City Rizal",
+      "buyerName": "BF JADE E-SERVICES PHILIPPINES INC.",
+      "buyerTaxId": "008-183-175",
+      "currency": [null, "P", "PHP"],
+      "taxAmount": "24,000.00",
+      "totalAmount": ["204,000.00", "224,000.00"],
+      "amountDue": ["204,000.00", "180,000.00", null],
+      "paymentTerms": null,
+      "purchaseOrderNumber": null
+    },
+    "lineItems": [
+      {"description": "PD — ZALORA 10.10 & 11.11", "quantity": "1", "lineAmount": "204,000.00"}
+    ]
+  },
+  "handwritten_06_laureen_uy.pdf": {
+    "invoice": {
+      "invoiceNumber": "0174",
+      "invoiceDate": "MARCH 05 2026",
+      "dueDate": null,
+      "supplierName": "DEANNA RUTH F. MARASIGAN MARKETING SERVICES, OPC",
+      "supplierAddress": "No. 82 Mother Ignacia Street, Laging Handa, 1103 Quezon City 00002 NCR, Second District, Philippines",
+      "buyerName": "BF JADE E-SERVICES PHILIPPINES INC.",
+      "buyerTaxId": "008-183-175",
+      "currency": ["P", "PHP", "pesos"],
+      "taxAmount": "18,352.94",
+      "totalAmount": ["171,294.12", "148,352.94"],
+      "amountDue": ["148,352.94", null],
+      "paymentTerms": null,
+      "purchaseOrderNumber": null
+    },
+    "lineItems": []
+  },
+  "multilingual_01_hongkong.pdf": {
+    "invoice": {
+      "invoiceNumber": "2272448431",
+      "invoiceDate": "28/02/2026",
+      "dueDate": ["31/03/2026", null],
+      "supplierName": "NEXTRA (HONG KONG) COMPANY LTD.",
+      "supplierAddress": "22nd Floor, 15 Wang Chiu Road, Kowloon Bay, Kowloon HONG KONG",
+      "buyerName": "ZALORA (HONG KONG) LIMITED",
+      "buyerTaxId": null,
+      "currency": "HKD",
+      "taxAmount": null,
+      "totalAmount": "1,159.30",
+      "amountDue": "1,159.30",
+      "paymentTerms": ["31/03/2026", null],
+      "purchaseOrderNumber": ["5100038208", "7677894"]
+    },
+    "lineItems": [
+      {"description": "BX100 CANCARE ALCOHOL PREPS", "quantity": "1", "unitPrice": "18.70", "lineAmount": "18.70"},
+      {"description": "BX25 BANITORE PLASTER CLEAR", "quantity": "1", "unitPrice": "17.50", "lineAmount": "17.50"},
+      {"description": "PACKAGING CLOTH 2\"X10YDS BLU", "quantity": "1", "unitPrice": "15.60", "lineAmount": "15.60"},
+      {"description": "PACKAGING CLOTH 2\"X10YDS YLLW", "quantity": "4", "unitPrice": "15.60", "lineAmount": "62.40"},
+      {"description": "PACKAGING CLOTH 2\"X10YDS RED", "quantity": "2", "unitPrice": "15.60", "lineAmount": "31.20"},
+      {"description": "PANFIX ADHESIVE TAPE 3/4\"X72YDS", "quantity": "16", "unitPrice": "25.10", "lineAmount": "401.60"},
+      {"description": "PANFIX ADHESIVE TAPE 3/4\"X36YDS", "quantity": "16", "unitPrice": "13.00", "lineAmount": "208.00"},
+      {"description": "PK3 WALCH LIQ SOAP MOIST W.REF 450ML", "quantity": "1", "unitPrice": "89.60", "lineAmount": "89.60"},
+      {"description": "PK100 PLASTIC LITTER BAG 24\"X24\"10MI WH", "quantity": "1", "unitPrice": "35.10", "lineAmount": "35.10"},
+      {"description": "PK10 VIRJOY BATHROOM TISSUE 3PLY YELLOW", "quantity": "2", "unitPrice": "39.60", "lineAmount": "79.20"},
+      {"description": "PK85 SCOTCH-BRITE 857HK DISINFECT WIPE", "quantity": "2", "unitPrice": "56.00", "lineAmount": "112.00"},
+      {"description": "PK5 VIRJOY 2PLY FACIAL TISSUE RED 130SHT", "quantity": "1", "unitPrice": "32.90", "lineAmount": "32.90"},
+      {"description": "PK250 FAVOUR M-FOLD PAPER FSC", "quantity": "3", "unitPrice": "18.50", "lineAmount": "55.50"},
+      {"description": "PK6 COCA-COLA MINI CAN 200ML", "quantity": "1"}
+    ]
+  },
+  "multilingual_02_vietnam.pdf": {
+    "invoice": {
+      "invoiceNumber": "00000114",
+      "invoiceDate": "22/01/2026",
+      "dueDate": null,
+      "supplierName": "CÔNG TY LIÊN DOANH HOÀNG KIM SÀI GÒN",
+      "supplierAddress": "12 Nguyễn Văn Linh, Phường Tân Phong, Thành phố Hồ Chí Minh, Việt Nam",
+      "buyerName": ["Global Fashion Group SGP Services Pte. Ltd", "Nguyen Huu Huan", "09-1B/Nguyen Huu Huan"],
+      "buyerTaxId": null,
+      "currency": [null, "VND", "đồng"],
+      "taxAmount": "3.925.455",
+      "totalAmount": "43.180.000",
+      "amountDue": ["43.180.000", null],
+      "paymentTerms": ["Tiền mặt/Chuyển khoản", null],
+      "purchaseOrderNumber": null
+    },
+    "lineItems": [
+      {"description": "Thuê căn hộ 12/01/2026-11/02/2026", "quantity": "1", "unitPrice": "39.254.545", "taxRate": ["10%", null], "lineAmount": "39.254.545"}
+    ]
+  },
+  "multilingual_03_singapore.pdf": {
+    "invoice": {
+      "invoiceNumber": "537685",
+      "invoiceDate": "09/09/25",
+      "dueDate": "15/10/25",
+      "supplierName": "Evergreen Fresh Produce Pte Ltd",
+      "supplierAddress": "42 Sungei Kadut Loop, #03-05 Kadut Logistics Hub Singapore 729665",
+      "buyerName": ["MILLIONAIRES TASTE PTE. LTD (REVERIE LIVE MUSIC)", "MILLIONAIRES TASTE PTE. LTD"],
+      "buyerTaxId": null,
+      "currency": "SGD",
+      "taxAmount": "9.13",
+      "totalAmount": "110.55",
+      "amountDue": ["110.55", null],
+      "paymentTerms": null,
+      "purchaseOrderNumber": null
+    },
+    "lineItems": [
+      {"description": "Carrot 红萝卜", "quantity": "1.20", "unitPrice": "1.40", "lineAmount": "1.68"},
+      {"description": "Grape Red 红葡萄", "quantity": "0.50", "unitPrice": "6.50", "lineAmount": "3.25"},
+      {"description": "Honeydew 蜜瓜", "quantity": "11.20", "unitPrice": "2.00", "lineAmount": "22.40"},
+      {"description": "Pineapple Honey 蜜黄梨", "quantity": "10.30", "unitPrice": "1.70", "lineAmount": "17.51"},
+      {"description": "Strawberry 草莓 250G", "quantity": "1.00", "unitPrice": "4.30", "lineAmount": "4.30"},
+      {"description": "Watermelon 西瓜", "quantity": "18.00", "unitPrice": "1.25", "lineAmount": "22.50"},
+      {"description": "Lettuce Iceberg 生菜粒", "quantity": "1.20", "unitPrice": "3.00", "lineAmount": "3.60"},
+      {"description": "Mesclun Salad (Triple Washed) 沙拉", "quantity": "1.00", "unitPrice": "16.00", "lineAmount": "16.00"},
+      {"description": "Romaine Lettuce 罗马生菜", "quantity": "1.00", "unitPrice": "3.50", "lineAmount": "3.50"},
+      {"description": "Onion White Peeled 去皮白大葱 1kg", "quantity": "2.00", "unitPrice": "1.60", "lineAmount": "3.20"},
+      {"description": "Cabbage 包菜", "quantity": "2.90", "unitPrice": "1.20", "lineAmount": "3.48"}
+    ]
+  },
+  "scanned_01.pdf": {
+    "invoice": {
+      "invoiceNumber": "0628329753",
+      "invoiceDate": "03.09.2025",
+      "dueDate": null,
+      "supplierName": ["AURORA COLA Singapore Beverages Pte. Ltd.", "Singapore Beverages Pte. Ltd.", "AURORA BEVERAGES SINGAPORE PTE. LTD."],
+      "supplierAddress": ["22B JURONG EAST STREET 21, #05-11 TRADEHUB 21, SINGAPORE 609601", null],
+      "buyerName": ["MILLIONAIRES TASTE PTE. LTD.", "MILLIONAIRES TASTE PTE. LTD. C/O REVERIE LIVE MUSIC BY BAR BAR Q"],
+      "buyerTaxId": null,
+      "currency": "SGD",
+      "taxAmount": "18.32",
+      "totalAmount": "221.82",
+      "amountDue": ["221.82", null],
+      "paymentTerms": "30 day from billing day",
+      "purchaseOrderNumber": "0HBHE9L0"
+    },
+    "lineItems": [
+      {"description": "320MLALSCN1X24 Aura SCSG", "quantity": "6.00", "unitPrice": ["15.00", "20.00"], "lineAmount": "90.00"},
+      {"description": "320MLALSCN1X24 Aura SCSG", "quantity": "1.00", "unitPrice": ["0.00", "20.00"], "lineAmount": "0.00"},
+      {"description": "320MLALSCN1X12 Zeta Gin Ale-KO UTT", "quantity": "4.00", "unitPrice": ["9.50", "20.00"], "lineAmount": "38.00"},
+      {"description": "320MLALSCN1X12 Zeta Tonic-KO UTT", "quantity": "4.00", "unitPrice": ["9.50", "20.00"], "lineAmount": "38.00"},
+      {"description": "320MLALSCN1X12 Zeta Soda Wtr-KO UTT", "quantity": "1.00", "unitPrice": ["0.00", "20.00"], "lineAmount": "0.00"},
+      {"description": "320MLALSCN1X12 AURA ZRO SGR UTCS", "quantity": "5.00", "unitPrice": ["7.50", "20.00"], "lineAmount": "37.50"}
+    ]
+  },
+  "scanned_02.pdf": {
+    "invoice": {
+      "invoiceNumber": "INV25080553",
+      "invoiceDate": "2/9/2025",
+      "dueDate": null,
+      "supplierName": "Meridian Finefood Pte Ltd",
+      "supplierAddress": "88 Woodlands Industrial Park E7, #02-11 Woodlands East Hub, Singapore 757317",
+      "buyerName": "Millionaires Taste Pte Ltd",
+      "buyerTaxId": null,
+      "currency": ["S$", "SGD"],
+      "taxAmount": "39.15",
+      "totalAmount": "474.15",
+      "amountDue": ["474.15", null],
+      "paymentTerms": "Net 30 days",
+      "purchaseOrderNumber": "T-WRIODOJK"
+    },
+    "lineItems": [
+      {"description": "Illy Coffee Bean CLASSIC Roast 3kg (Ctn x 2 Unit)", "quantity": "1", "unitPrice": "195.00", "lineAmount": "195.00"},
+      {"description": "Illy Coffee Bean DECAF (Blue) 250gm (Ctn x 12 Unit)", "quantity": "6", "unitPrice": "18.00", "lineAmount": "108.00"},
+      {"description": "Caotina Swiss PRONTO Chocolate Powder 1kg (Ctn x 6 Unit)", "quantity": "6", "unitPrice": "22.00", "lineAmount": "132.00"}
+    ]
+  },
+  "scanned_03_mj_wines.pdf": {
+    "invoice": {
+      "invoiceNumber": "INV5436SP",
+      "invoiceDate": "11/09/2025",
+      "dueDate": "11/10/2025",
+      "supplierName": "VANTAGE CELLARS INTERNATIONAL PTE. LTD.",
+      "supplierAddress": "88 Playfair Road, #06-03, Singapore, 367977",
+      "buyerName": ["Millionaires Taste Pte. Ltd. (Reverie Live Music)", "Millionaires Taste Pte. Ltd."],
+      "buyerTaxId": null,
+      "currency": ["S$", "SGD"],
+      "taxAmount": "S$ 51.48",
+      "totalAmount": "S$ 623.48",
+      "amountDue": ["S$ 623.48", null],
+      "paymentTerms": "30 Days",
+      "purchaseOrderNumber": ["Tinvio Order #I7LTY6EV", "I7LTY6EV"]
+    },
+    "lineItems": [
+      {"description": "Amicale Rosso Veneto IGT Red Wine 750ml", "quantity": "4 Btl", "unitPrice": "25.00", "lineAmount": "S$ 100.00"},
+      {"description": "Flavabom Vine Dried Shiraz Red Wine 750ml", "quantity": "4 Btl", "unitPrice": "38.00", "lineAmount": "S$ 152.00"},
+      {"description": "Lluvia De Flores Sauvignon Blanc White Wine 375ml", "quantity": "12 Btl", "unitPrice": "20.00", "lineAmount": "S$ 240.00"},
+      {"description": "Silterra Prosecco Spumante DOC Extra Dry Sparkling Wine 750ml", "quantity": "4 Btl", "unitPrice": "20.00", "lineAmount": "S$ 80.00"}
+    ]
+  }
+}

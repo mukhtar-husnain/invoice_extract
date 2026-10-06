@@ -32,33 +32,30 @@ class LineItem(BaseModel):
     description: FieldValue = Field(default_factory=FieldValue)
     quantity: FieldValue = Field(default_factory=FieldValue)
     unitPrice: FieldValue = Field(default_factory=FieldValue)
+    taxRate: FieldValue = Field(default_factory=FieldValue)
+    taxAmount: FieldValue = Field(default_factory=FieldValue)
     lineAmount: FieldValue = Field(default_factory=FieldValue)
-    itemCode: FieldValue = Field(default_factory=FieldValue)
-    unitOfMeasure: FieldValue = Field(default_factory=FieldValue)
 
     def iter_fields(self) -> list[tuple[str, FieldValue]]:
-        return [
-            ("description", self.description),
-            ("quantity", self.quantity),
-            ("unitPrice", self.unitPrice),
-            ("lineAmount", self.lineAmount),
-            ("itemCode", self.itemCode),
-            ("unitOfMeasure", self.unitOfMeasure),
-        ]
+        from invoice_extract.config import LINE_ITEM_FIELD_NAMES
+
+        return [(name, getattr(self, name)) for name in LINE_ITEM_FIELD_NAMES]
 
 
 class InvoiceHeader(BaseModel):
     invoiceNumber: FieldValue = Field(default_factory=FieldValue)
     invoiceDate: FieldValue = Field(default_factory=FieldValue)
+    dueDate: FieldValue = Field(default_factory=FieldValue)
     supplierName: FieldValue = Field(default_factory=FieldValue)
     supplierAddress: FieldValue = Field(default_factory=FieldValue)
     buyerName: FieldValue = Field(default_factory=FieldValue)
-    buyerAddress: FieldValue = Field(default_factory=FieldValue)
+    buyerTaxId: FieldValue = Field(default_factory=FieldValue)
     currency: FieldValue = Field(default_factory=FieldValue)
-    subtotalAmount: FieldValue = Field(default_factory=FieldValue)
     taxAmount: FieldValue = Field(default_factory=FieldValue)
     totalAmount: FieldValue = Field(default_factory=FieldValue)
+    amountDue: FieldValue = Field(default_factory=FieldValue)
     paymentTerms: FieldValue = Field(default_factory=FieldValue)
+    purchaseOrderNumber: FieldValue = Field(default_factory=FieldValue)
 
 
 class InvoiceDocument(BaseModel):

@@ -17,12 +17,25 @@
         "FIELD_MISSING"
       ]
     },
-    "supplierName": {
+    "dueDate": {
       "value": null,
       "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "supplierName": {
+      "value": "| Owned & Operated By Marisol-ventura Corp.",
+      "bbox": {
+        "x1": 743,
+        "y1": 143,
+        "x2": 1200,
+        "y2": 174,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE",
+        "INVALID_FORMAT"
       ]
     },
     "supplierAddress": {
@@ -32,18 +45,32 @@
       "reviewReasons": []
     },
     "buyerName": {
-      "value": null,
-      "bbox": null,
+      "value": "PF JEDE E SERVICES Pints tuc",
+      "bbox": {
+        "x1": 1019,
+        "y1": 406,
+        "x2": 1475,
+        "y2": 439,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE"
       ]
     },
-    "buyerAddress": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
+    "buyerTaxId": {
+      "value": "\\2",
+      "bbox": {
+        "x1": 1108,
+        "y1": 454,
+        "x2": 1156,
+        "y2": 487,
+        "page": 1
+      },
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "INVALID_FORMAT"
+      ]
     },
     "currency": {
       "value": null,
@@ -53,17 +80,19 @@
         "FIELD_MISSING"
       ]
     },
-    "subtotalAmount": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
-    },
     "taxAmount": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
+      "value": "41",
+      "bbox": {
+        "x1": 1436,
+        "y1": 1122,
+        "x2": 1462,
+        "y2": 1142,
+        "page": 1
+      },
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "LOW_CONFIDENCE"
+      ]
     },
     "totalAmount": {
       "value": null,
@@ -73,7 +102,19 @@
         "FIELD_MISSING"
       ]
     },
+    "amountDue": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
     "paymentTerms": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "purchaseOrderNumber": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
@@ -83,6 +124,8 @@
   "lineItems": [],
   "isHumanReviewRequired": true,
   "reviewReasons": [
-    "FIELD_MISSING"
+    "FIELD_MISSING",
+    "INVALID_FORMAT",
+    "LOW_CONFIDENCE"
   ]
 }

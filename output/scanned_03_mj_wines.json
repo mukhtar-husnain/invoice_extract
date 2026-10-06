@@ -10,19 +10,41 @@
       ]
     },
     "invoiceDate": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": true,
-      "reviewReasons": [
-        "FIELD_MISSING"
-      ]
+      "value": "11/09/2025",
+      "bbox": {
+        "x1": 2351,
+        "y1": 662,
+        "x2": 2532,
+        "y2": 690,
+        "page": 1
+      },
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "dueDate": {
+      "value": "11/10/2025",
+      "bbox": {
+        "x1": 2298,
+        "y1": 714,
+        "x2": 2481,
+        "y2": 745,
+        "page": 1
+      },
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
     },
     "supplierName": {
-      "value": null,
-      "bbox": null,
+      "value": "VANTAGE CELLARS INTERNATIONAL PTE. LTD.",
+      "bbox": {
+        "x1": 1885,
+        "y1": 46,
+        "x2": 2965,
+        "y2": 78,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE"
       ]
     },
     "supplierAddress": {
@@ -39,50 +61,281 @@
         "FIELD_MISSING"
       ]
     },
-    "buyerAddress": {
+    "buyerTaxId": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
       "reviewReasons": []
     },
     "currency": {
-      "value": null,
-      "bbox": null,
+      "value": "S$",
+      "bbox": {
+        "x1": 2828,
+        "y1": 1130,
+        "x2": 2864,
+        "y2": 1158,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE"
       ]
-    },
-    "subtotalAmount": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
     },
     "taxAmount": {
+      "value": "9%",
+      "bbox": {
+        "x1": 2144,
+        "y1": 1895,
+        "x2": 2198,
+        "y2": 1923,
+        "page": 1
+      },
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "INVALID_FORMAT"
+      ]
+    },
+    "totalAmount": {
+      "value": "623.48",
+      "bbox": {
+        "x1": 2868,
+        "y1": 1960,
+        "x2": 2978,
+        "y2": 1989,
+        "page": 1
+      },
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "LOW_CONFIDENCE",
+        "AMOUNT_INCONSISTENT"
+      ]
+    },
+    "amountDue": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
       "reviewReasons": []
     },
-    "totalAmount": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": true,
-      "reviewReasons": [
-        "FIELD_MISSING"
-      ]
-    },
     "paymentTerms": {
-      "value": null,
-      "bbox": null,
+      "value": "30 Days",
+      "bbox": {
+        "x1": 2398,
+        "y1": 872,
+        "x2": 2528,
+        "y2": 905,
+        "page": 1
+      },
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "purchaseOrderNumber": {
+      "value": "#I7LTY6EV",
+      "bbox": {
+        "x1": 2459,
+        "y1": 819,
+        "x2": 2633,
+        "y2": 847,
+        "page": 1
+      },
       "isHumanReviewRequired": false,
       "reviewReasons": []
     }
   },
-  "lineItems": [],
+  "lineItems": [
+    {
+      "description": {
+        "value": "Amicale Rosso Veneto IGT Red Wine",
+        "bbox": {
+          "x1": 838,
+          "y1": 1125,
+          "x2": 1433,
+          "y2": 1161,
+          "page": 1
+        },
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "quantity": {
+        "value": "750m!",
+        "bbox": {
+          "x1": 1450,
+          "y1": 1136,
+          "x2": 1546,
+          "y2": 1167,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE",
+          "INVALID_FORMAT",
+          "AMOUNT_INCONSISTENT"
+        ]
+      },
+      "unitPrice": {
+        "value": "25.00",
+        "bbox": {
+          "x1": 2252,
+          "y1": 1127,
+          "x2": 2342,
+          "y2": 1158,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "AMOUNT_INCONSISTENT"
+        ]
+      },
+      "taxRate": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "taxAmount": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "lineAmount": {
+        "value": "S$ 100 00",
+        "bbox": {
+          "x1": 2828,
+          "y1": 1130,
+          "x2": 2986,
+          "y2": 1160,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "AMOUNT_INCONSISTENT"
+        ]
+      }
+    },
+    {
+      "description": {
+        "value": "Lluvia De Flores Sauvignon Blanc White |",
+        "bbox": {
+          "x1": 765,
+          "y1": 1440,
+          "x2": 1638,
+          "y2": 1484,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "INVALID_FORMAT"
+        ]
+      },
+      "quantity": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "unitPrice": {
+        "value": "20.00",
+        "bbox": {
+          "x1": 2245,
+          "y1": 1447,
+          "x2": 2335,
+          "y2": 1478,
+          "page": 1
+        },
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "taxRate": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "taxAmount": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "lineAmount": {
+        "value": "S$ 240 00",
+        "bbox": {
+          "x1": 2827,
+          "y1": 1441,
+          "x2": 2985,
+          "y2": 1471,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "AMOUNT_INCONSISTENT"
+        ]
+      }
+    },
+    {
+      "description": {
+        "value": "Siterra Prosecco Spumante DOC",
+        "bbox": {
+          "x1": 759,
+          "y1": 1607,
+          "x2": 1293,
+          "y2": 1643,
+          "page": 1
+        },
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "quantity": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "unitPrice": {
+        "value": "20.00",
+        "bbox": {
+          "x1": 2241,
+          "y1": 1607,
+          "x2": 2331,
+          "y2": 1637,
+          "page": 1
+        },
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "taxRate": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "taxAmount": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "lineAmount": {
+        "value": "S$ 80 00",
+        "bbox": {
+          "x1": 2845,
+          "y1": 1599,
+          "x2": 2982,
+          "y2": 1629,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "AMOUNT_INCONSISTENT"
+        ]
+      }
+    }
+  ],
   "isHumanReviewRequired": true,
   "reviewReasons": [
-    "FIELD_MISSING"
+    "AMOUNT_INCONSISTENT",
+    "FIELD_MISSING",
+    "INVALID_FORMAT",
+    "LOW_CONFIDENCE"
   ]
 }

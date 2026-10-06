@@ -49,6 +49,16 @@ On Linux, Compose maps `host.docker.internal` to the host. Host Ollama must list
 docker compose run --rm --entrypoint pytest app
 ```
 
+### Score against the answer key
+
+```bash
+docker compose run --rm --entrypoint python app -m invoice_extract.evaluate --pred /output
+```
+
+### Everything in one go
+
+`scripts/docker_verify.sh` builds the image, runs the tests, extracts all PDFs (with Tesseract OCR), scores them, and prints the image size (about 360 MB). Pass `ollama` or `api` to use a model instead of rules.
+
 ### Clean up
 
 ```bash
@@ -75,6 +85,8 @@ source .venv/bin/activate
 pip install -e ".[dev]"
 brew install tesseract tesseract-lang
 ```
+
+Without Tesseract, the pipeline still runs, but image-only pages (scans, handwriting) produce empty, flagged fields. Docker includes Tesseract, so use it if installing Tesseract locally is a problem.
 
 Run on the bundled sample invoices:
 
@@ -110,7 +122,11 @@ Each invoice JSON looks like this:
 
 Every field (header and line item) always includes `value`, `bbox`, `isHumanReviewRequired`, and `reviewReasons`. Missing values use `"value": null` and `"bbox": null`.
 
-Mandatory header fields: `invoiceNumber`, `invoiceDate`, `supplierName`, `buyerName`, `currency`, `totalAmount`.
+Header fields (always all 13 keys): `invoiceNumber`, `invoiceDate`, `dueDate`, `supplierName`, `supplierAddress`, `buyerName`, `buyerTaxId`, `currency`, `taxAmount`, `totalAmount`, `amountDue`, `paymentTerms`, `purchaseOrderNumber`.
+
+Line-item fields (always all 6 keys per row): `description`, `quantity`, `unitPrice`, `taxRate`, `taxAmount`, `lineAmount`.
+
+Mandatory header fields: `invoiceNumber`, `invoiceDate`, `supplierName`, `buyerName`, `currency`, `totalAmount`. If any is missing, the invoice is flagged with `FIELD_MISSING`.
 
 ## Extractor modes
 
@@ -132,7 +148,9 @@ ollama pull qwen2.5vl:7b
 python -m invoice_extract --extractor ollama
 ```
 
-Override the model with `INVOICE_OLLAMA_MODEL=my-model`.
+Override the model with `INVOICE_OLLAMA_MODEL=my-model` (for example `qwen2.5vl:3b` on machines with less RAM).
+
+**Speed warning.** Vision models need a GPU or Apple Silicon to be practical. On an Intel Mac with 16 GB RAM and no GPU, `qwen2.5vl:3b` had not finished a single one-page invoice after 26 minutes. On such machines use `rules` or `api`.
 
 ### External vision API
 
@@ -142,7 +160,58 @@ export OPENAI_API_KEY=sk-...
 python -m invoice_extract --extractor api
 ```
 
-Supported environment variables: `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `GEMINI_API_KEY`.
+### Environment variables
+
+All are optional; blank values (as in `.env.example`) mean "use the default".
+
+| Variable | Default | Purpose |
+|----------|---------|---------|
+| `INVOICE_LLM_PROVIDER` | `openai` | `openai`, `anthropic`, or `gemini` for api mode |
+| `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` / `GEMINI_API_KEY` | none | Key for the chosen provider |
+| `INVOICE_OPENAI_MODEL` / `INVOICE_ANTHROPIC_MODEL` / `INVOICE_GEMINI_MODEL` | `gpt-4o` / `claude-3-5-sonnet-20241022` / `gemini-2.0-flash` | Provider model |
+| `INVOICE_OLLAMA_URL` | `http://127.0.0.1:11434` | Ollama server |
+| `INVOICE_OLLAMA_MODEL` | `qwen2.5vl:7b` | Ollama vision model |
+| `INVOICE_OLLAMA_NUM_CTX` | `16384` | Ollama context window (prompt includes every word box) |
+| `INVOICE_OLLAMA_TIMEOUT_S` | `1800` | Per-invoice Ollama timeout |
+| `INVOICE_IMAGE_MAX_SIDE` | `1280` | Longest side, in pixels, of page images sent to a model |
+
+## Evaluation and results
+
+`eval/gold.json` is a hand-checked answer key for the 13 sample invoices. A field's expected value is a string, `null` (not printed on the invoice), or a list of acceptable values when the invoice is ambiguous (for example, receipts printing both "Total Sales" and "Payment Due").
+
+```bash
+python -m invoice_extract.evaluate --gold eval/gold.json --pred output --report eval/report.json
+```
+
+Values are compared after normalization: amounts as numbers, dates as calendar days (day-first), currencies as ISO codes, identifiers by letters and digits only, and other text by fuzzy match (at least 85% similar). Line items are paired with answer-key rows by description and amount.
+
+- **Missed-review rate** = values that are wrong and not flagged ÷ all extracted (non-null) values.
+- The command adds an `evaluation` block to `output/summary.json` and writes per-field and per-invoice detail plus every error to `eval/report.json`.
+
+To score new PDFs, add their expected values to `eval/gold.json` under their `documentId`.
+
+### Current results (rules mode with Tesseract OCR, from `scripts/docker_verify.sh`)
+
+| Metric | Value |
+|--------|-------|
+| Invoices processed | 13 |
+| Fields requiring human review | 76 (36 low confidence, 24 missing mandatory, 16 invalid format, 10 amount mismatch; a field can have several reasons) |
+| Invoices requiring human review | 13 of 13 |
+| Extracted values | 161 |
+| Wrong values | 32, of which 31 flagged |
+| **Missed-review rate** | **0.62%** (1 of 161) |
+| Precision (extracted values that are correct) | 80.1% |
+| Recall (answer-key values found) | 42.3% |
+
+How this splits by invoice type:
+
+- **Digital and multilingual text-layer invoices** (`digital_*`, Hong Kong, Vietnam) are read well: 83–100% of answer-key values found, with no unflagged errors.
+- **Scanned and handwritten invoices** are where rules mode struggles. Tesseract reads printed scans reasonably (`scanned_03` finds 56%), but handwriting comes out as noise. Rules mode therefore extracts little from handwriting, and most of what it does extract fails format checks and is flagged rather than silently accepted.
+- The one unflagged error is a wine description in `scanned_03` that wraps onto a second line which OCR placed out of order, so only the first line was kept.
+
+Every invoice is flagged because each has at least one guessed field (for example, a supplier name found by company suffix rather than a label) or a missing mandatory field. A vision model (`--extractor ollama` or `api`) is the intended path for handwriting.
+
+Without Tesseract (a local run with no OCR installed), only the 5 text-layer invoices are read. That run scores 0 unflagged errors out of 107 extracted values (97.2% precision, 34.1% recall).
 
 ## How it works
 
@@ -194,6 +263,10 @@ Processing follows seven stages for every PDF, whether it is a clean digital fil
 | `invoice_extract/align.py` | Token union and bbox assignment |
 | `invoice_extract/review.py` | Review flags and amount checks |
 | `invoice_extract/schema.py` | JSON output models |
+| `invoice_extract/normalize.py` | Amount, date, currency, and text normalization |
+| `invoice_extract/evaluate.py` | Scoring against the answer key (missed-review rate) |
+| `eval/gold.json` | Hand-checked answer key for the sample invoices |
+| `scripts/docker_verify.sh` | Build, test, extract, and score in Docker |
 | `data/` | Sample invoice PDFs (13 files) |
 | `output/` | Generated JSON results |
 | `tests/` | Unit tests |
@@ -211,7 +284,10 @@ Processing follows seven stages for every PDF, whether it is a clean digital fil
 |--------|---------|
 | `FIELD_MISSING` | A mandatory header field has no value |
 | `LOW_CONFIDENCE` | Weak OCR/model confidence, value not grounded in cited tokens, or value spans pages |
-| `AMOUNT_INCONSISTENT` | `quantity × unitPrice ≠ lineAmount`, or header totals do not add up |
+| `AMOUNT_INCONSISTENT` | `quantity × unitPrice ≠ lineAmount`, line tax ≠ amount × rate, line items do not sum to the total, tax ≥ total, or amount due > total |
+| `INVALID_FORMAT` | Value does not fit its type: an amount that is really a date, percentage, or tax ID; an unparseable date or currency; an invoice number with fewer than 3 digits; a tax ID with fewer than 6 digits; a name or description containing stray OCR symbols |
+
+Two header fields read from the exact same box are both flagged `LOW_CONFIDENCE` (except `totalAmount` and `amountDue`, which are often the same printed number).
 
 Document-level `isHumanReviewRequired` is `true` when any field is flagged or any mandatory field is missing.
 
@@ -237,9 +313,9 @@ Use **rules** for a quick offline demo or when you have no GPU and no API key. U
 
 Review flags are intentional. The pipeline prefers to flag uncertainty rather than silently accept a bad value. Common causes: rules mode guessing labels on complex layouts (`LOW_CONFIDENCE`), mandatory fields not found on scans without OCR (`FIELD_MISSING`), or line amounts that do not multiply correctly (`AMOUNT_INCONSISTENT`). Better extractors and installed Tesseract language packs reduce false flags.
 
-### Why is there no accuracy or missed-review rate in the summary?
+### How is the missed-review rate measured?
 
-This project outputs extraction results and review counts only. Measuring "incorrect values that were not flagged" requires a hidden gold-standard dataset held by an external evaluator. The summary reports `fieldsRequiringHumanReview` and `invoicesRequiringHumanReview` — not a percentage accuracy score.
+Against the hand-checked answer key in `eval/gold.json`; see [Evaluation and results](#evaluation-and-results). The answer key covers the 13 sample invoices only, so new PDFs need their own entries before they can be scored.
 
 ### Do I need internet to run this?
 

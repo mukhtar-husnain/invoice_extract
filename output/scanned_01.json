@@ -10,19 +10,38 @@
       ]
     },
     "invoiceDate": {
-      "value": null,
-      "bbox": null,
+      "value": "oad 08.09.2025",
+      "bbox": {
+        "x1": 2459,
+        "y1": 185,
+        "x2": 2658,
+        "y2": 337,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE"
       ]
     },
-    "supplierName": {
+    "dueDate": {
       "value": null,
       "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "supplierName": {
+      "value": "C O LA Pte. Ltd. Customer peedback DOCUMENT NO. oad ~\u2014",
+      "bbox": {
+        "x1": 189,
+        "y1": 184,
+        "x2": 2936,
+        "y2": 290,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE",
+        "INVALID_FORMAT"
       ]
     },
     "supplierAddress": {
@@ -32,32 +51,38 @@
       "reviewReasons": []
     },
     "buyerName": {
-      "value": null,
-      "bbox": null,
+      "value": "505387672 OHBHESLO",
+      "bbox": {
+        "x1": 2347,
+        "y1": 669,
+        "x2": 2783,
+        "y2": 714,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "INVALID_FORMAT"
       ]
     },
-    "buyerAddress": {
+    "buyerTaxId": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
       "reviewReasons": []
     },
     "currency": {
-      "value": null,
-      "bbox": null,
+      "value": "SGD",
+      "bbox": {
+        "x1": 2740,
+        "y1": 1080,
+        "x2": 2823,
+        "y2": 1115,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE"
       ]
-    },
-    "subtotalAmount": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
     },
     "taxAmount": {
       "value": null,
@@ -66,23 +91,217 @@
       "reviewReasons": []
     },
     "totalAmount": {
-      "value": null,
-      "bbox": null,
+      "value": "221.82",
+      "bbox": {
+        "x1": 3196,
+        "y1": 2487,
+        "x2": 3316,
+        "y2": 2522,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE",
+        "AMOUNT_INCONSISTENT"
       ]
+    },
+    "amountDue": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
     },
     "paymentTerms": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
       "reviewReasons": []
+    },
+    "purchaseOrderNumber": {
+      "value": "_\u20acKA2",
+      "bbox": {
+        "x1": 3085,
+        "y1": 664,
+        "x2": 3197,
+        "y2": 705,
+        "page": 1
+      },
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "LOW_CONFIDENCE"
+      ]
     }
   },
-  "lineItems": [],
+  "lineItems": [
+    {
+      "description": {
+        "value": "a TAXES",
+        "bbox": {
+          "x1": 64,
+          "y1": 1410,
+          "x2": 1853,
+          "y2": 1479,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE"
+        ]
+      },
+      "quantity": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "unitPrice": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "taxRate": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "taxAmount": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "lineAmount": {
+        "value": "80",
+        "bbox": {
+          "x1": 3393,
+          "y1": 1377,
+          "x2": 3467,
+          "y2": 1470,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "LOW_CONFIDENCE",
+          "AMOUNT_INCONSISTENT"
+        ]
+      }
+    },
+    {
+      "description": {
+        "value": "\\ Pr . sinter Act",
+        "bbox": {
+          "x1": 2582,
+          "y1": 2995,
+          "x2": 2798,
+          "y2": 3094,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "INVALID_FORMAT"
+        ]
+      },
+      "quantity": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "unitPrice": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "taxRate": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "taxAmount": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "lineAmount": {
+        "value": "20",
+        "bbox": {
+          "x1": 2795,
+          "y1": 3025,
+          "x2": 2824,
+          "y2": 3052,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "AMOUNT_INCONSISTENT"
+        ]
+      }
+    },
+    {
+      "description": {
+        "value": "NAME \u00a7 SIGN",
+        "bbox": {
+          "x1": 3060,
+          "y1": 3039,
+          "x2": 3255,
+          "y2": 3077,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "INVALID_FORMAT"
+        ]
+      },
+      "quantity": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "unitPrice": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "taxRate": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "taxAmount": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "lineAmount": {
+        "value": "4",
+        "bbox": {
+          "x1": 3333,
+          "y1": 3051,
+          "x2": 3340,
+          "y2": 3066,
+          "page": 1
+        },
+        "isHumanReviewRequired": true,
+        "reviewReasons": [
+          "AMOUNT_INCONSISTENT"
+        ]
+      }
+    }
+  ],
   "isHumanReviewRequired": true,
   "reviewReasons": [
-    "FIELD_MISSING"
+    "AMOUNT_INCONSISTENT",
+    "FIELD_MISSING",
+    "INVALID_FORMAT",
+    "LOW_CONFIDENCE"
   ]
 }

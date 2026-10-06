@@ -16,6 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY pyproject.toml README.md ./
 COPY invoice_extract/ invoice_extract/
 COPY tests/ tests/
+COPY eval/ eval/
 RUN pip install --no-deps .
 
 RUN useradd --create-home --uid 1000 app

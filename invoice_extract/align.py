@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
+from difflib import SequenceMatcher
 
+from invoice_extract.normalize import normalize_text
 from invoice_extract.render import Token, union_bbox
 from invoice_extract.schema import BBox, FieldValue
 
@@ -39,9 +41,45 @@ def _tokens_by_id(tokens: list[Token]) -> dict[int, Token]:
 def _value_in_token_text(value: str, cited: list[Token]) -> bool:
     if not cited:
         return False
-    joined = collapse_whitespace(" ".join(t.text for t in cited))
-    normalized_value = collapse_whitespace(value)
-    return normalized_value in joined or joined in normalized_value
+    joined = normalize_text(" ".join(t.text for t in cited))
+    normalized_value = normalize_text(value)
+    if not normalized_value or not joined:
+        return False
+    return normalized_value in joined or (len(joined) >= 0.6 * len(normalized_value) and joined in normalized_value)
+
+
+def _reading_orders(tokens: list[Token]) -> list[list[Token]]:
+    by_line = sorted(tokens, key=lambda t: (t.page, round(t.y / 10), t.x))
+    return [tokens, by_line]
+
+
+def find_value_span(value: str, tokens: list[Token], min_ratio: float = 0.9) -> list[Token]:
+    """Find the consecutive page words whose text best matches value, for re-grounding uncited values."""
+    target = normalize_text(value)
+    if not target:
+        return []
+    width = max(1, len(target.split()))
+    best: tuple[float, list[Token]] = (0.0, [])
+    for order in _reading_orders(tokens):
+        for start in range(len(order)):
+            for size in range(max(1, width - 1), width + 3):
+                window = order[start : start + size]
+                if len(window) < size or len({t.page for t in window}) > 1:
+                    break
+                joined = normalize_text(" ".join(t.text for t in window))
+                if not joined:
+                    continue
+                if joined == target:
+                    return window
+                if abs(len(joined) - len(target)) > max(4, len(target) // 3):
+                    continue
+                matcher = SequenceMatcher(None, joined, target)
+                if matcher.real_quick_ratio() < min_ratio or matcher.quick_ratio() < min_ratio:
+                    continue
+                ratio = matcher.ratio()
+                if ratio > best[0]:
+                    best = (ratio, window)
+    return best[1] if best[0] >= min_ratio else []
 
 
 def align_field(
@@ -58,8 +96,13 @@ def align_field(
     mean_ocr: float | None = None
     token_grounded = True
 
-    if raw.value is not None:
+    if raw.value is not None and raw.value.strip():
         field.value = collapse_whitespace(raw.value)
+
+    if field.value is not None and not _value_in_token_text(field.value, cited):
+        regrounded = find_value_span(field.value, tokens)
+        if regrounded:
+            cited = regrounded
 
     spans_pages = False
     if cited:

@@ -14,47 +14,93 @@ import httpx
 from PIL import Image
 
 from invoice_extract.align import RawFieldExtraction
-from invoice_extract.config import HEADER_FIELD_NAMES, LINE_ITEM_FIELD_NAMES, PipelineConfig
+from invoice_extract.config import HEADER_FIELD_NAMES, LINE_ITEM_FIELD_NAMES, PipelineConfig, env_or
 from invoice_extract.render import DocumentRender, PageRender, Token
 
 
-EXTRACTION_SCHEMA_HINT = {
-    "header": {name: {"value": "string|null", "tokenIds": [0], "confidence": 0.9} for name in HEADER_FIELD_NAMES},
-    "lineItems": [
-        {name: {"value": "string|null", "tokenIds": [0], "confidence": 0.9} for name in LINE_ITEM_FIELD_NAMES}
-    ],
+HEADER_FIELD_GUIDE = {
+    "invoiceNumber": "invoice, receipt, or document number (No., Invoice No, So, 發票號碼)",
+    "invoiceDate": "date the invoice was issued",
+    "dueDate": "payment due date, only if printed",
+    "supplierName": "seller or issuer name, usually the letterhead at the top",
+    "supplierAddress": "seller address",
+    "buyerName": "customer name (Bill To, Sold To, Customer Name, Received From, Nguoi mua)",
+    "buyerTaxId": "buyer's tax id (TIN, tax code) printed in the buyer section, not the seller's",
+    "currency": "currency code or symbol as printed, e.g. RM, MYR, S$, SGD, HKD, P",
+    "taxAmount": "total tax, VAT, GST, or service tax amount",
+    "totalAmount": "grand total of the invoice",
+    "amountDue": "amount due or balance due, only if printed",
+    "paymentTerms": "payment terms text, e.g. 'Net 30 days'",
+    "purchaseOrderNumber": "buyer purchase order number (PO, P.O. No, Your ref)",
+}
+
+LINE_FIELD_GUIDE = {
+    "description": "item or service description",
+    "quantity": "quantity",
+    "unitPrice": "unit price",
+    "taxRate": "tax rate for the line, only if printed on the line",
+    "taxAmount": "tax amount for the line, only if printed on the line",
+    "lineAmount": "line total amount",
+}
+
+_FIELD_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "value": {"type": ["string", "null"]},
+        "tokenIds": {"type": "array", "items": {"type": "integer"}},
+        "confidence": {"type": "number"},
+    },
+    "required": ["value", "tokenIds", "confidence"],
+}
+
+EXTRACTION_JSON_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "header": {
+            "type": "object",
+            "properties": {name: _FIELD_SCHEMA for name in HEADER_FIELD_NAMES},
+            "required": list(HEADER_FIELD_NAMES),
+        },
+        "lineItems": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {name: _FIELD_SCHEMA for name in LINE_ITEM_FIELD_NAMES},
+                "required": list(LINE_ITEM_FIELD_NAMES),
+            },
+        },
+    },
+    "required": ["header", "lineItems"],
 }
 
 
-def build_token_catalog(tokens: list[Token]) -> list[dict[str, Any]]:
-    return [
-        {
-            "id": t.id,
-            "page": t.page,
-            "text": t.text,
-            "x": t.x,
-            "y": t.y,
-            "width": t.width,
-            "height": t.height,
-            "confidence": t.confidence,
-        }
-        for t in tokens
-    ]
+def build_token_catalog(tokens: list[Token]) -> str:
+    """One line per word: id|page|x,y|text. Compact so dense pages fit the context window."""
+    return "\n".join(f"{t.id}|{t.page}|{t.x},{t.y}|{t.text}" for t in tokens)
 
 
 def build_prompt(document_id: str, tokens: list[Token]) -> str:
-    catalog = build_token_catalog(tokens)
+    header_guide = "\n".join(f"- {name}: {desc}" for name, desc in HEADER_FIELD_GUIDE.items())
+    line_guide = "\n".join(f"- {name}: {desc}" for name, desc in LINE_FIELD_GUIDE.items())
+    example = {
+        "header": {"invoiceNumber": {"value": "INV-001", "tokenIds": [12], "confidence": 0.95}},
+        "lineItems": [{"description": {"value": "Widget", "tokenIds": [40], "confidence": 0.9}}],
+    }
+    words = build_token_catalog(tokens) if tokens else "(no words detected; read values from the image)"
     return (
-        "Extract invoice header fields and line items from the page images. "
-        "Return ONLY valid JSON matching this shape:\n"
-        f"{json.dumps(EXTRACTION_SCHEMA_HINT, indent=2)}\n\n"
+        "You extract fields from an invoice. The page images and a list of words found on the pages are given.\n"
+        "Return ONLY JSON with a 'header' object containing every header field below, and a 'lineItems' array. "
+        "Each field is {\"value\": string or null, \"tokenIds\": [word ids], \"confidence\": 0.0-1.0}.\n\n"
+        f"Header fields:\n{header_guide}\n\n"
+        f"Line item fields (one object per charged item row; skip blank, subtotal, and total rows):\n{line_guide}\n\n"
         "Rules:\n"
-        "- value must be printed text exactly as shown (whitespace collapsed).\n"
-        "- tokenIds must reference ids from the token list below; do not invent coordinates.\n"
-        "- Use null value and empty tokenIds when a field is absent.\n"
-        "- confidence is 0.0-1.0 for your extraction certainty.\n\n"
+        "- value is the text exactly as printed, not reformatted or translated.\n"
+        "- tokenIds are the ids of the words that make up the value. Never invent ids.\n"
+        "- If a field is not printed, use value null, tokenIds [], confidence 1.0.\n"
+        "- confidence below 0.75 means you are unsure (hard to read, or could be another field).\n"
+        f"Example shape: {json.dumps(example)}\n\n"
         f"documentId: {document_id}\n"
-        f"tokens: {json.dumps(catalog)}\n"
+        f"Words (id|page|x,y|text):\n{words}\n"
     )
 
 
@@ -69,15 +115,24 @@ def _image_to_base64(image: Image.Image, max_side: int) -> str:
     return base64.b64encode(buf.getvalue()).decode("ascii")
 
 
-def _parse_field(raw: dict[str, Any] | None) -> RawFieldExtraction:
-    if not raw:
+def _parse_field(raw: Any) -> RawFieldExtraction:
+    if raw is None or raw == {}:
         return RawFieldExtraction(value=None, token_ids=[], confidence=None)
+    if not isinstance(raw, dict):
+        return RawFieldExtraction(value=str(raw), token_ids=[], confidence=None)
     value = raw.get("value")
     if value is not None:
         value = str(value)
-    token_ids = [int(x) for x in raw.get("tokenIds") or []]
-    conf = raw.get("confidence")
-    confidence = float(conf) if conf is not None else None
+    token_ids = []
+    for x in raw.get("tokenIds") or []:
+        try:
+            token_ids.append(int(x))
+        except (TypeError, ValueError):
+            continue
+    try:
+        confidence = float(raw["confidence"]) if raw.get("confidence") is not None else None
+    except (TypeError, ValueError):
+        confidence = None
     return RawFieldExtraction(value=value, token_ids=token_ids, confidence=confidence)
 
 
@@ -89,6 +144,8 @@ def parse_extraction_response(payload: dict[str, Any]) -> tuple[dict[str, RawFie
     line_items_raw = payload.get("lineItems") or []
     line_items: list[dict[str, RawFieldExtraction]] = []
     for row in line_items_raw:
+        if not isinstance(row, dict):
+            continue
         parsed_row: dict[str, RawFieldExtraction] = {}
         for name in LINE_ITEM_FIELD_NAMES:
             parsed_row[name] = _parse_field(row.get(name))
@@ -121,10 +178,11 @@ class OllamaExtractor(BaseExtractor):
             "model": self.config.ollama_model,
             "prompt": prompt,
             "stream": False,
-            "format": "json",
+            "format": EXTRACTION_JSON_SCHEMA,
             "images": images,
+            "options": {"temperature": 0, "num_ctx": self.config.ollama_num_ctx},
         }
-        with httpx.Client(timeout=300.0) as client:
+        with httpx.Client(timeout=self.config.ollama_timeout_s) as client:
             resp = client.post(f"{self.config.ollama_base_url}/api/generate", json=body)
             resp.raise_for_status()
             data = resp.json()
@@ -132,10 +190,17 @@ class OllamaExtractor(BaseExtractor):
         return parse_extraction_response(payload)
 
 
+def _require_key(name: str) -> str:
+    key = os.environ.get(name, "").strip()
+    if not key:
+        raise RuntimeError(f"{name} is not set; add it to .env or the environment, or use --extractor rules/ollama.")
+    return key
+
+
 class OpenAIExtractor(BaseExtractor):
     def __init__(self, config: PipelineConfig) -> None:
         self.config = config
-        self.api_key = os.environ["OPENAI_API_KEY"]
+        self.api_key = _require_key("OPENAI_API_KEY")
 
     def extract(self, doc: DocumentRender) -> tuple[dict[str, RawFieldExtraction], list[dict[str, RawFieldExtraction]]]:
         return _call_openai_compatible(
@@ -143,14 +208,14 @@ class OpenAIExtractor(BaseExtractor):
             config=self.config,
             api_key=self.api_key,
             base_url="https://api.openai.com/v1",
-            model=os.environ.get("INVOICE_OPENAI_MODEL", "gpt-4o"),
+            model=env_or("INVOICE_OPENAI_MODEL", "gpt-4o"),
         )
 
 
 class AnthropicExtractor(BaseExtractor):
     def __init__(self, config: PipelineConfig) -> None:
         self.config = config
-        self.api_key = os.environ["ANTHROPIC_API_KEY"]
+        self.api_key = _require_key("ANTHROPIC_API_KEY")
 
     def extract(self, doc: DocumentRender) -> tuple[dict[str, RawFieldExtraction], list[dict[str, RawFieldExtraction]]]:
         content: list[dict[str, Any]] = [{"type": "text", "text": build_prompt(doc.document_id, doc.tokens)}]
@@ -163,7 +228,7 @@ class AnthropicExtractor(BaseExtractor):
                 }
             )
         body = {
-            "model": os.environ.get("INVOICE_ANTHROPIC_MODEL", "claude-3-5-sonnet-20241022"),
+            "model": env_or("INVOICE_ANTHROPIC_MODEL", "claude-3-5-sonnet-20241022"),
             "max_tokens": 4096,
             "messages": [{"role": "user", "content": content}],
         }
@@ -183,14 +248,14 @@ class AnthropicExtractor(BaseExtractor):
 class GeminiExtractor(BaseExtractor):
     def __init__(self, config: PipelineConfig) -> None:
         self.config = config
-        self.api_key = os.environ["GEMINI_API_KEY"]
+        self.api_key = _require_key("GEMINI_API_KEY")
 
     def extract(self, doc: DocumentRender) -> tuple[dict[str, RawFieldExtraction], list[dict[str, RawFieldExtraction]]]:
         parts: list[dict[str, Any]] = [{"text": build_prompt(doc.document_id, doc.tokens)}]
         for page in doc.pages:
             b64 = _image_to_base64(page.image, self.config.image_max_side)
             parts.append({"inline_data": {"mime_type": "image/png", "data": b64}})
-        model = os.environ.get("INVOICE_GEMINI_MODEL", "gemini-2.0-flash")
+        model = env_or("INVOICE_GEMINI_MODEL", "gemini-2.0-flash")
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
         body = {"contents": [{"parts": parts}]}
         with httpx.Client(timeout=300.0) as client:

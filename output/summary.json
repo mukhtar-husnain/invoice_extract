@@ -1,7 +1,7 @@
 {
   "extractor": "rules",
   "documentsProcessed": 13,
-  "fieldsRequiringHumanReview": 240,
+  "fieldsRequiringHumanReview": 76,
   "invoicesRequiringHumanReview": 13,
   "documents": [
     "digital_01.pdf",
@@ -17,5 +17,14 @@
     "scanned_01.pdf",
     "scanned_02.pdf",
     "scanned_03_mj_wines.pdf"
-  ]
+  ],
+  "evaluation": {
+    "answerKey": "eval/gold.json",
+    "extractedValues": 161,
+    "incorrectValues": 32,
+    "incorrectNotFlagged": 1,
+    "missedReviewRatePct": 0.62,
+    "precisionPct": 80.12,
+    "recallPct": 42.3
+  }
 }

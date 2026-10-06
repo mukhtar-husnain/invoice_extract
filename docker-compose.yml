@@ -4,6 +4,7 @@ services:
     volumes:
       - ./data:/data:ro
       - ./output:/output
+      - ./eval:/app/eval
     env_file:
       - path: .env
         required: false

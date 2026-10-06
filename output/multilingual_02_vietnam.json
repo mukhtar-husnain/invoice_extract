@@ -2,12 +2,16 @@
   "documentId": "multilingual_02_vietnam.pdf",
   "invoice": {
     "invoiceNumber": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": true,
-      "reviewReasons": [
-        "FIELD_MISSING"
-      ]
+      "value": "00000114",
+      "bbox": {
+        "x1": 1276,
+        "y1": 527,
+        "x2": 1417,
+        "y2": 559,
+        "page": 1
+      },
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
     },
     "invoiceDate": {
       "value": "(day) 22 th\u00e1ng (month) 01 n\u0103m (year) 2026",
@@ -18,18 +22,22 @@
         "y2": 718,
         "page": 1
       },
-      "isHumanReviewRequired": true,
-      "reviewReasons": [
-        "LOW_CONFIDENCE"
-      ]
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "dueDate": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
     },
     "supplierName": {
-      "value": "\u0110\u00e3 \u0111\u01b0\u1ee3c k\u00fd \u0111i\u1ec7n t\u1eed b\u1edfi",
+      "value": "C\u00d4NG TY LI\u00caN DOANH HO\u00c0NG KIM S\u00c0I G\u00d2N",
       "bbox": {
-        "x1": 1043,
-        "y1": 1904,
-        "x2": 1351,
-        "y2": 1932,
+        "x1": 543,
+        "y1": 110,
+        "x2": 909,
+        "y2": 134,
         "page": 1
       },
       "isHumanReviewRequired": true,
@@ -38,8 +46,14 @@
       ]
     },
     "supplierAddress": {
-      "value": null,
-      "bbox": null,
+      "value": "12 Nguy\u1ec5n V\u0103n Linh, Ph\u01b0\u1eddng T\u00e2n Phong, Th\u00e0nh ph\u1ed1 H\u1ed3 Ch\u00ed",
+      "bbox": {
+        "x1": 758,
+        "y1": 154,
+        "x2": 1499,
+        "y2": 183,
+        "page": 1
+      },
       "isHumanReviewRequired": false,
       "reviewReasons": []
     },
@@ -52,12 +66,10 @@
         "y2": 787,
         "page": 1
       },
-      "isHumanReviewRequired": true,
-      "reviewReasons": [
-        "LOW_CONFIDENCE"
-      ]
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
     },
-    "buyerAddress": {
+    "buyerTaxId": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
@@ -71,43 +83,43 @@
         "FIELD_MISSING"
       ]
     },
-    "subtotalAmount": {
-      "value": "39.254.545",
-      "bbox": {
-        "x1": 1416,
-        "y1": 1598,
-        "x2": 1555,
-        "y2": 1626,
-        "page": 1
-      },
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
-    },
     "taxAmount": {
-      "value": "Code): 0 4 1 5 6 7 2",
+      "value": "3.925.455",
       "bbox": {
-        "x1": 744,
-        "y1": 226,
-        "x2": 909,
-        "y2": 254,
+        "x1": 1432,
+        "y1": 1648,
+        "x2": 1555,
+        "y2": 1676,
         "page": 1
       },
       "isHumanReviewRequired": false,
       "reviewReasons": []
     },
     "totalAmount": {
-      "value": "39.254.545",
+      "value": "43.180.000",
       "bbox": {
         "x1": 1416,
-        "y1": 1598,
+        "y1": 1698,
         "x2": 1555,
-        "y2": 1626,
+        "y2": 1726,
         "page": 1
       },
       "isHumanReviewRequired": false,
       "reviewReasons": []
     },
+    "amountDue": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
     "paymentTerms": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "purchaseOrderNumber": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
@@ -117,103 +129,52 @@
   "lineItems": [
     {
       "description": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "quantity": {
-        "value": "1",
+        "value": "c\u0103n h\u1ed9 12/01/2026-11/02/2026",
         "bbox": {
-          "x1": 123,
-          "y1": 1233,
-          "x2": 135,
-          "y2": 1255,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE",
-          "AMOUNT_INCONSISTENT"
-        ]
-      },
-      "unitPrice": {
-        "value": "2",
-        "bbox": {
-          "x1": 453,
-          "y1": 1233,
-          "x2": 465,
-          "y2": 1255,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE",
-          "AMOUNT_INCONSISTENT"
-        ]
-      },
-      "lineAmount": {
-        "value": "5",
-        "bbox": {
-          "x1": 1474,
-          "y1": 1233,
-          "x2": 1486,
-          "y2": 1255,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE",
-          "AMOUNT_INCONSISTENT"
-        ]
-      },
-      "itemCode": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitOfMeasure": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      }
-    },
-    {
-      "description": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "quantity": {
-        "value": "1",
-        "bbox": {
-          "x1": 122,
-          "y1": 1282,
-          "x2": 137,
-          "y2": 1309,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "unitPrice": {
-        "value": "12/01/2026-11/02/2026",
-        "bbox": {
-          "x1": 352,
+          "x1": 261,
           "y1": 1282,
           "x2": 639,
           "y2": 1309,
           "page": 1
         },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "quantity": {
+        "value": "1",
+        "bbox": {
+          "x1": 985,
+          "y1": 1282,
+          "x2": 1001,
+          "y2": 1309,
+          "page": 1
+        },
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "unitPrice": {
+        "value": "39.254.545",
+        "bbox": {
+          "x1": 1165,
+          "y1": 1282,
+          "x2": 1304,
+          "y2": 1309,
+          "page": 1
+        },
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "taxRate": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
+      },
+      "taxAmount": {
+        "value": null,
+        "bbox": null,
+        "isHumanReviewRequired": false,
+        "reviewReasons": []
       },
       "lineAmount": {
         "value": "39.254.545",
@@ -224,528 +185,6 @@
           "y2": 1309,
           "page": 1
         },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "itemCode": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitOfMeasure": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      }
-    },
-    {
-      "description": {
-        "value": "C\u1ed9ng ti\u1ec1n h\u00e0ng (Sub Total):",
-        "bbox": {
-          "x1": 978,
-          "y1": 1598,
-          "x2": 1304,
-          "y2": 1626,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "quantity": {
-        "value": "39.254.545",
-        "bbox": {
-          "x1": 1416,
-          "y1": 1598,
-          "x2": 1555,
-          "y2": 1626,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "unitPrice": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "lineAmount": {
-        "value": "39.254.545",
-        "bbox": {
-          "x1": 1416,
-          "y1": 1598,
-          "x2": 1555,
-          "y2": 1626,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "itemCode": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitOfMeasure": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      }
-    },
-    {
-      "description": {
-        "value": "Thu\u1ebf su\u1ea5t GTGT rate):",
-        "bbox": {
-          "x1": 97,
-          "y1": 1648,
-          "x2": 428,
-          "y2": 1676,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "quantity": {
-        "value": "10%",
-        "bbox": {
-          "x1": 459,
-          "y1": 1648,
-          "x2": 514,
-          "y2": 1676,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "unitPrice": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "lineAmount": {
-        "value": "3.925.455",
-        "bbox": {
-          "x1": 1432,
-          "y1": 1648,
-          "x2": 1555,
-          "y2": 1676,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "itemCode": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitOfMeasure": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      }
-    },
-    {
-      "description": {
-        "value": "(Tax",
-        "bbox": {
-          "x1": 312,
-          "y1": 1650,
-          "x2": 362,
-          "y2": 1675,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "quantity": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitPrice": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "lineAmount": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "itemCode": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitOfMeasure": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      }
-    },
-    {
-      "description": {
-        "value": "T\u1ed5ng c\u1ed9ng ti\u1ec1n thanh to\u00e1n (Grand Total):",
-        "bbox": {
-          "x1": 819,
-          "y1": 1698,
-          "x2": 1304,
-          "y2": 1726,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "quantity": {
-        "value": "43.180.000",
-        "bbox": {
-          "x1": 1416,
-          "y1": 1698,
-          "x2": 1555,
-          "y2": 1726,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "unitPrice": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "lineAmount": {
-        "value": "43.180.000",
-        "bbox": {
-          "x1": 1416,
-          "y1": 1698,
-          "x2": 1555,
-          "y2": 1726,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "itemCode": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitOfMeasure": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      }
-    },
-    {
-      "description": {
-        "value": "S\u1ed1",
-        "bbox": {
-          "x1": 97,
-          "y1": 1748,
-          "x2": 131,
-          "y2": 1776,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "quantity": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitPrice": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "lineAmount": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "itemCode": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitOfMeasure": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      }
-    },
-    {
-      "description": {
-        "value": "Ng\u01b0\u1eddi",
-        "bbox": {
-          "x1": 298,
-          "y1": 1840,
-          "x2": 382,
-          "y2": 1868,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "quantity": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitPrice": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "lineAmount": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "itemCode": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitOfMeasure": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      }
-    },
-    {
-      "description": {
-        "value": "(Buyer)",
-        "bbox": {
-          "x1": 529,
-          "y1": 1842,
-          "x2": 611,
-          "y2": 1867,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "quantity": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitPrice": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "lineAmount": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "itemCode": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitOfMeasure": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      }
-    },
-    {
-      "description": {
-        "value": "\u0110\u00e3",
-        "bbox": {
-          "x1": 1043,
-          "y1": 1904,
-          "x2": 1079,
-          "y2": 1932,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "quantity": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitPrice": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "lineAmount": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "itemCode": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitOfMeasure": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      }
-    },
-    {
-      "description": {
-        "value": "(Signed",
-        "bbox": {
-          "x1": 1088,
-          "y1": 1942,
-          "x2": 1175,
-          "y2": 1967,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "quantity": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitPrice": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "lineAmount": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "itemCode": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitOfMeasure": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      }
-    },
-    {
-      "description": {
-        "value": "C\u00d4NG",
-        "bbox": {
-          "x1": 904,
-          "y1": 1997,
-          "x2": 949,
-          "y2": 2017,
-          "page": 1
-        },
-        "isHumanReviewRequired": true,
-        "reviewReasons": [
-          "LOW_CONFIDENCE"
-        ]
-      },
-      "quantity": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitPrice": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "lineAmount": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "itemCode": {
-        "value": null,
-        "bbox": null,
-        "isHumanReviewRequired": false,
-        "reviewReasons": []
-      },
-      "unitOfMeasure": {
-        "value": null,
-        "bbox": null,
         "isHumanReviewRequired": false,
         "reviewReasons": []
       }
@@ -753,7 +192,6 @@
   ],
   "isHumanReviewRequired": true,
   "reviewReasons": [
-    "AMOUNT_INCONSISTENT",
     "FIELD_MISSING",
     "LOW_CONFIDENCE"
   ]

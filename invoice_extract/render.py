@@ -52,19 +52,42 @@ def _word_to_pixels(word: fitz.Rect, scale: float) -> tuple[int, int, int, int]:
     return x0, y0, max(1, x1 - x0), max(1, y1 - y0)
 
 
+def _is_vertical(text: str, w: int, h: int) -> bool:
+    return len(text) >= 3 and h > w * 1.2
+
+
+def _merge_letter_spaced(words: list[tuple[str, int, int, int, int]]) -> list[tuple[str, int, int, int, int]]:
+    """Rejoin wide-tracked headings that the text layer splits into single letters ('T O T A L' -> 'TOTAL')."""
+    merged: list[tuple[str, int, int, int, int]] = []
+    for text, x, y, w, h in words:
+        if merged:
+            ptext, px, py, pw, ph = merged[-1]
+            gap = x - (px + pw)
+            same_line = abs(y - py) <= max(4, ph * 0.3) and abs(h - ph) <= max(4, ph * 0.3)
+            prev_spaced = len(ptext) == 1 or ptext.endswith("\u200b")
+            if same_line and len(text) == 1 and (len(ptext) == 1 or prev_spaced) and -2 <= gap < ph * 0.75:
+                merged[-1] = (ptext.rstrip("\u200b") + text + "\u200b", px, min(py, y), x + w - px, max(ph, h))
+                continue
+        merged.append((text, x, y, w, h))
+    return [(t.rstrip("\u200b"), x, y, w, h) for t, x, y, w, h in merged]
+
+
 def _extract_native_words(page: fitz.Page, page_num: int, scale: float, start_id: int) -> list[Token]:
-    tokens: list[Token] = []
-    words = page.get_text("words")
-    for idx, word in enumerate(words):
+    raw: list[tuple[str, int, int, int, int]] = []
+    for word in page.get_text("words"):
         if len(word) < 5:
             continue
         x, y, w, h = _word_to_pixels(fitz.Rect(word[0], word[1], word[2], word[3]), scale)
         text = str(word[4]).strip()
-        if not text:
+        if not text or _is_vertical(text, w, h):
             continue
+        raw.append((text, x, y, w, h))
+
+    tokens: list[Token] = []
+    for text, x, y, w, h in _merge_letter_spaced(raw):
         tokens.append(
             Token(
-                id=start_id + idx,
+                id=start_id + len(tokens),
                 text=text,
                 page=page_num,
                 x=x,

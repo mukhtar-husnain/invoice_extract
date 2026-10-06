@@ -2,11 +2,17 @@
   "documentId": "handwritten_04_charismalico.pdf",
   "invoice": {
     "invoiceNumber": {
-      "value": null,
-      "bbox": null,
+      "value": "i16",
+      "bbox": {
+        "x1": 7014,
+        "y1": 786,
+        "x2": 7591,
+        "y2": 991,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "INVALID_FORMAT"
       ]
     },
     "invoiceDate": {
@@ -17,12 +23,24 @@
         "FIELD_MISSING"
       ]
     },
-    "supplierName": {
+    "dueDate": {
       "value": null,
       "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "supplierName": {
+      "value": "RENZ ADRIAN P. CORTEZ PHOTOGRAPHY SERVICES",
+      "bbox": {
+        "x1": 3347,
+        "y1": 576,
+        "x2": 4633,
+        "y2": 610,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "LOW_CONFIDENCE"
       ]
     },
     "supplierAddress": {
@@ -32,18 +50,32 @@
       "reviewReasons": []
     },
     "buyerName": {
-      "value": null,
-      "bbox": null,
+      "value": "BF JAOE E- \u20acE\u00a3v",
+      "bbox": {
+        "x1": 1087,
+        "y1": 1227,
+        "x2": 2072,
+        "y2": 1350,
+        "page": 1
+      },
       "isHumanReviewRequired": true,
       "reviewReasons": [
-        "FIELD_MISSING"
+        "INVALID_FORMAT"
       ]
     },
-    "buyerAddress": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
+    "buyerTaxId": {
+      "value": "103-137 0\u2020, 204$",
+      "bbox": {
+        "x1": 6767,
+        "y1": 1237,
+        "x2": 7305,
+        "y2": 1572,
+        "page": 1
+      },
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "INVALID_FORMAT"
+      ]
     },
     "currency": {
       "value": null,
@@ -53,17 +85,20 @@
         "FIELD_MISSING"
       ]
     },
-    "subtotalAmount": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
-    },
     "taxAmount": {
-      "value": null,
-      "bbox": null,
-      "isHumanReviewRequired": false,
-      "reviewReasons": []
+      "value": "000-00",
+      "bbox": {
+        "x1": 6926,
+        "y1": 1927,
+        "x2": 7945,
+        "y2": 2082,
+        "page": 1
+      },
+      "isHumanReviewRequired": true,
+      "reviewReasons": [
+        "LOW_CONFIDENCE",
+        "INVALID_FORMAT"
+      ]
     },
     "totalAmount": {
       "value": null,
@@ -73,7 +108,19 @@
         "FIELD_MISSING"
       ]
     },
+    "amountDue": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
     "paymentTerms": {
+      "value": null,
+      "bbox": null,
+      "isHumanReviewRequired": false,
+      "reviewReasons": []
+    },
+    "purchaseOrderNumber": {
       "value": null,
       "bbox": null,
       "isHumanReviewRequired": false,
@@ -83,6 +130,8 @@
   "lineItems": [],
   "isHumanReviewRequired": true,
   "reviewReasons": [
-    "FIELD_MISSING"
+    "FIELD_MISSING",
+    "INVALID_FORMAT",
+    "LOW_CONFIDENCE"
   ]
 }

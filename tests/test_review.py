@@ -8,11 +8,14 @@ from invoice_extract.config import (
 )
 from invoice_extract.review import (
     apply_document_review,
+    check_document_amounts,
     check_line_item_amounts,
+    check_shared_boxes,
     count_fields_requiring_review,
     rollup_document_review,
+    value_has_valid_format,
 )
-from invoice_extract.schema import FieldValue, InvoiceDocument, LineItem
+from invoice_extract.schema import BBox, FieldValue, InvoiceDocument, LineItem
 
 
 def _field(value: str | None = None, flagged: bool = False, reasons: list[str] | None = None) -> FieldValue:
@@ -79,6 +82,36 @@ def test_cross_page_field_gets_low_confidence():
     }
     apply_document_review(doc, meta, ReviewThresholds())
     assert REVIEW_REASON_LOW_CONFIDENCE in doc.invoice.supplierAddress.reviewReasons
+
+
+def test_tax_id_read_as_tax_amount_is_invalid_format():
+    assert not value_has_valid_format("taxAmount", "615-734-218-00000")
+    assert not value_has_valid_format("totalAmount", "9%")
+    assert not value_has_valid_format("invoiceNumber", "82")
+    assert not value_has_valid_format("buyerTaxId", "\\2")
+    assert value_has_valid_format("buyerTaxId", "008-183-175-000")
+    assert value_has_valid_format("quantity", "1 PK100")
+
+
+def test_two_fields_on_the_same_box_are_both_flagged():
+    box = BBox(page=1, x1=10, y1=10, x2=50, y2=20)
+    doc = InvoiceDocument(documentId="x.pdf")
+    doc.invoice.taxAmount = FieldValue(value="615-734-218", bbox=box)
+    doc.invoice.buyerTaxId = FieldValue(value="615-734-218", bbox=box)
+    doc.invoice.totalAmount = FieldValue(value="100.00", bbox=BBox(page=1, x1=60, y1=10, x2=90, y2=20))
+    doc.invoice.amountDue = FieldValue(value="100.00", bbox=BBox(page=1, x1=60, y1=10, x2=90, y2=20))
+    check_shared_boxes(doc)
+    assert REVIEW_REASON_LOW_CONFIDENCE in doc.invoice.taxAmount.reviewReasons
+    assert REVIEW_REASON_LOW_CONFIDENCE in doc.invoice.buyerTaxId.reviewReasons
+    assert not doc.invoice.totalAmount.isHumanReviewRequired
+
+
+def test_lines_not_adding_up_flag_every_line_amount():
+    doc = InvoiceDocument(documentId="x.pdf")
+    doc.invoice.totalAmount = _field("221.82")
+    doc.lineItems = [LineItem(lineAmount=_field("20")), LineItem(lineAmount=_field("4"))]
+    check_document_amounts(doc, ReviewThresholds())
+    assert all(REVIEW_REASON_AMOUNT_INCONSISTENT in i.lineAmount.reviewReasons for i in doc.lineItems)
 
 
 def test_field_count_excludes_document_only_flags():
